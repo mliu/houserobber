@@ -6,18 +6,8 @@ export (int) var speed = 300
 var velocity = Vector2(0,0)
 var analog_velocity = Vector2(0,0)
 
-# screensize and player size variables
-var screensize
-var extents
-
 func _ready():
-
-	# get Screensize and determine player size
-	screensize = get_viewport_rect().size
-	extents = $sprite.get_texture().get_size() /4
-
-	# Set animation speed
-	$sprite/anim.playback_speed = 3
+	pass
 
 func _physics_process(delta):
 	
@@ -41,33 +31,26 @@ func _physics_process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-
-	if velocity.x != 0:
-		if velocity.x > 0:
-			if $sprite/anim.current_animation != "Right":
-				$sprite/anim.play("Right")
-		else:
-			if $sprite/anim.current_animation != "Left":
-				$sprite/anim.play("Left")
+	if velocity.x > 0:
+		$sprite.play("WalkRight")
+	elif velocity.x < 0:
+		$sprite.play("WalkLeft")
 	elif velocity.y != 0:
-		if velocity.y > 0:
-			if $sprite/anim.current_animation != "Down":
-				$sprite/anim.play("Down")
-		else:
-			if $sprite/anim.current_animation != "Up":
-				$sprite/anim.play("Up")		
+		$sprite.play("Idle")	
 	else:
-		if $sprite/anim.current_animation == "Right":
-			$sprite/anim.play("Idle-Right")
-		if $sprite/anim.current_animation == "Left":
-			$sprite/anim.play("Idle-Left")
-		if $sprite/anim.current_animation == "Up":
-			$sprite/anim.play("Idle-Up")
-		if $sprite/anim.current_animation == "Down":
-			$sprite/anim.play("Idle-Down")
+		$sprite.play("Idle")
+		# No idle animations
+#		if $sprite/anim.current_animation == "Right":
+#			$sprite/anim.play("Idle-Right")
+#		if $sprite/anim.current_animation == "Left":
+#			$sprite/anim.play("Idle-Left")
+#		if $sprite/anim.current_animation == "Up":
+#			$sprite/anim.play("Idle-Up")
+#		if $sprite/anim.current_animation == "Down":
+#			$sprite/anim.play("Idle-Down")
 		#$sprite/anim.stop()	
 	
-	move_and_collide(velocity * delta)
+	move_and_slide(velocity)
 	
 func analog_force_change(inForce, inStick):
 	if(inStick.get_name()=="AnalogRight") or (inStick.get_name()=="AnalogLeft"):
