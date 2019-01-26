@@ -9,7 +9,7 @@ custom_solver_bias = 0.0
 radius = 45.3972
 height = 45.2974
 
-[node name="tree" type="Area2D" index="0"]
+[node name="tree" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -20,6 +20,7 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
+noise = 10
 
 [node name="sprite" type="Sprite" parent="." index="0"]
 
