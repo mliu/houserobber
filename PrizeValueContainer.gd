@@ -6,7 +6,6 @@ var score = 0
 func _ready():
 	pass
 
-
 func _process(delta):
 	 $PrizeValue.text = str(ceil(score))
 

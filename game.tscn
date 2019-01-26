@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game.gd" type="Script" id=1]
 [ext_resource path="res://bg.jpg" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://analog/analog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Wall.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entrance.tscn" type="PackedScene" id=8]
 
 [node name="game" type="Node2D" index="0"]
 
@@ -136,5 +137,9 @@ position = Vector2( 460.32, 420.71 )
 [node name="Wall4" parent="." index="9" instance=ExtResource( 7 )]
 
 position = Vector2( 927.074, 142.004 )
+
+[node name="Entrance" parent="." index="10" instance=ExtResource( 8 )]
+
+position = Vector2( 115.139, 613.23 )
 
 

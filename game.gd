@@ -20,9 +20,7 @@ func _ready():
 	screensize = get_viewport().size
 	spawn_trees(rand_range(1,10))
 	spawn_prizes(10)
-	
-	
-	
+	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
@@ -39,12 +37,6 @@ func spawn_trees(num):
 		game_tree.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
 		$tree_container.add_child(game_tree)
 
-func _increase_noise(decibels):
-	noise_level += decibels
-	$CanvasLayer/HealthBar.on_update_health(noise_level / max_noise_level)
-	# TODO: game over
-	
-
 func spawn_prizes(num):	
 	for i in range(num):
 		var game_prize = prize.instance()
@@ -53,9 +45,17 @@ func spawn_prizes(num):
 		# Set Random position of npc
 		game_prize.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
 		$prize_container.add_child(game_prize)
-		
+
+func _increase_noise(decibels):
+	noise_level += decibels
+	$CanvasLayer/HealthBar.on_update_health(noise_level / max_noise_level)
+	# TODO: game over
 
 func _collect_prize(prize_value):
 	total_prize_value += prize_value
 	$CanvasLayer/PrizeValueCounter.on_update_prize_value(total_prize_value)
+	
+func _on_exit():
+	# Only exit if it's past 30 seconds
+	
 	
