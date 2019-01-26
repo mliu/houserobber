@@ -56,6 +56,7 @@ func _collect_prize(prize_node):
 func _on_exit():
 	# Only exit if it's past 30 seconds
 	if timer.elapsed > 3 and !$CanvasLayer/Dialog.visible:
+		get_tree().paused = true
 		$CanvasLayer/Dialog.visible = true
 		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
 
