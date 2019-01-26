@@ -19,10 +19,6 @@ func _ready():
 	# Set animation speed
 	$sprite/anim.playback_speed = 3
 
-	# Set Starting Animation, Position and Size for Player
-	position = Vector2(screensize.x / 2, screensize.y / 2)
-	$sprite.set_scale(Vector2(2, 2))
-
 func _physics_process(delta):
 	
 	velocity = Vector2()

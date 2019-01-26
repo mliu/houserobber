@@ -2,12 +2,13 @@ extends Node
 
 onready var tree = preload("res://tree.tscn")
 onready var prize = preload("res://Prize.tscn")
+onready var timer = $CanvasLayer/Timer
 
 var screensize
 var noise_level = 0.0
 var max_noise_level = 100.0
 var total_prize_value = 0.0
-
+var collected_prizes = []
 
 func _ready():
 	# Dont Allow quitting by x and closing game (set this true in Game Start Screen)
@@ -23,8 +24,7 @@ func _ready():
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
-	# Called every frame. Delta is time since last frame.
-	# Update game logic here.
+	print(collected_prizes)
 	pass
 
 func spawn_trees(num):	
@@ -51,11 +51,12 @@ func _increase_noise(decibels):
 	$CanvasLayer/HealthBar.on_update_health(noise_level / max_noise_level)
 	# TODO: game over
 
-func _collect_prize(prize_value):
-	total_prize_value += prize_value
-	$CanvasLayer/PrizeValueCounter.on_update_prize_value(total_prize_value)
+func _collect_prize(prize_node):
+	collected_prizes.append(prize_node)
 	
 func _on_exit():
 	# Only exit if it's past 30 seconds
-	
+	if timer.elapsed > 30:
+		# TODO show game over screen
+		pass
 	
