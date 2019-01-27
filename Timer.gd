@@ -11,13 +11,22 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	#$TimeLeft.align = 1
+	_time_remaining()
+	_time_label_color()
+
+
+func _time_remaining():
 	time_now = OS.get_unix_time()
 	elapsed = time_now - time_start
 	remaining = time_end - elapsed
 	var str_remaining = "%02d : %02d" % [remaining / 60, remaining % 60]
-	$TimeLeft.text = str_remaining
+	$TimeLeft.bbcode_text = "[center]%s[/center]" % str_remaining
 	
+func _time_label_color():
 	if remaining < (5*60 - 2):
-		$TimeLeft.add_color_override("font_color", "yellow")
+		print(1)
+		# $TimeLeft.add_color_override("font_color", "yellow")
 	elif remaining < (5*60 - 5):
-		$TimeLeft.add_color_override("font_color", "red")
+		print(2)
+		#$TimeLeft.add_color_override("font_color", "red")
