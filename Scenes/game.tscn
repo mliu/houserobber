@@ -85,6 +85,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 script = ExtResource( 1 )
 max_prizes = 3
+level_type = null
 
 [node name="Background" type="Sprite" parent="." index="0"]
 

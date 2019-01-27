@@ -3,7 +3,7 @@
 [ext_resource path="res://Timer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/timer.png" type="Texture" id=2]
 
-[node name="Timer" type="Node"]
+[node name="Timer" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
