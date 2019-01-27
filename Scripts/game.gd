@@ -30,6 +30,8 @@ func _ready():
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
+	if $CanvasLayer/EscapeDialog/ScreenContainer/RestartButton.is_pressed():
+		get_tree().reload_current_scene()
 	pass
 
 func spawn_prizes():
@@ -58,10 +60,10 @@ func _collect_prize(prize_node):
 	
 func _on_exit():
 	# Only exit if it's past 15 seconds
-	if timer.elapsed > 15 and !$CanvasLayer/Dialog.visible:
+	if timer.elapsed > 1 and !$CanvasLayer/EscapeDialog.visible:
 		get_tree().paused = true
-		$CanvasLayer/Dialog.visible = true
-		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
+		$CanvasLayer/EscapeDialog.visible = true
+		var grid = $CanvasLayer/EscapeDialog/ScreenContainer/GridContainer
 		for prize_path in collected_prizes:
 			var prize_image = load(prize_path).instance()
 			grid.add_child(prize_image)
