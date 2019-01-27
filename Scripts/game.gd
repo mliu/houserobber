@@ -60,6 +60,7 @@ func _increase_noise(decibels):
 	if noise_level >= max_noise_level:
 		get_tree().paused = true
 		$CanvasLayer/GameOverDialog.visible = true
+		noise_level = 0.0
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
