@@ -20,6 +20,10 @@ var selected_scene
 
 signal collected(prize_node)
 
+func get_extents():
+	print("hi")
+	return $CollisionShape2D.shape.extents
+
 func _ready():
 	if level_type == Enums.CUTE:
 		prize_scenes = prize_directories.cute
@@ -27,7 +31,12 @@ func _ready():
 		prize_scenes = prize_directories.scary
 
 	selected_scene = prize_scenes.keys()[rand_range(0, prize_scenes.size())]
-	self.add_child(load(prize_scenes[selected_scene]).instance())
+	var texture = load(prize_scenes[selected_scene]).instance()
+	var shape = RectangleShape2D.new()
+	shape.extents = texture.texture.get_size() / 2
+	$CollisionShape2D.shape = shape
+	$CollisionShape2D.position = texture.texture.get_size() / 2
+	self.add_child(texture)
 	pass
 
 func _process(delta):

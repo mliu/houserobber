@@ -47,7 +47,7 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
 max_prizes = 20
@@ -75,6 +75,162 @@ _sections_unfolded = [ "Transform", "Z Index" ]
 [node name="prize_container" type="Node" parent="." index="3"]
 
 [node name="prize_spawn_container" type="Node" parent="." index="4"]
+
+[node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
+
+position = Vector2( 2744.09, 302.045 )
+
+[node name="spawn2" type="Node2D" parent="prize_spawn_container" index="1"]
+
+position = Vector2( 4673.68, 307.076 )
+
+[node name="spawn3" type="Node2D" parent="prize_spawn_container" index="2"]
+
+position = Vector2( 3732.79, 143.552 )
+
+[node name="spawn4" type="Node2D" parent="prize_spawn_container" index="3"]
+
+position = Vector2( 5186.89, 171.225 )
+
+[node name="spawn5" type="Node2D" parent="prize_spawn_container" index="4"]
+
+position = Vector2( 4298.83, 649.219 )
+
+[node name="spawn6" type="Node2D" parent="prize_spawn_container" index="5"]
+
+position = Vector2( 3136.55, 656.766 )
+
+[node name="spawn7" type="Node2D" parent="prize_spawn_container" index="6"]
+
+position = Vector2( 3669.89, 767.459 )
+
+[node name="spawn8" type="Node2D" parent="prize_spawn_container" index="7"]
+
+position = Vector2( 3257.31, 1564.95 )
+
+[node name="spawn9" type="Node2D" parent="prize_spawn_container" index="8"]
+
+position = Vector2( 3765.49, 1557.41 )
+
+[node name="spawn10" type="Node2D" parent="prize_spawn_container" index="9"]
+
+position = Vector2( 4263.61, 1587.59 )
+
+[node name="spawn11" type="Node2D" parent="prize_spawn_container" index="10"]
+
+position = Vector2( 2721.45, 1544.83 )
+
+[node name="spawn12" type="Node2D" parent="prize_spawn_container" index="11"]
+
+position = Vector2( 2268.62, 691.986 )
+
+[node name="spawn13" type="Node2D" parent="prize_spawn_container" index="12"]
+
+position = Vector2( 2849.76, 666.829 )
+
+[node name="spawn14" type="Node2D" parent="prize_spawn_container" index="13"]
+
+position = Vector2( 1888.74, 274.372 )
+
+[node name="spawn15" type="Node2D" parent="prize_spawn_container" index="14"]
+
+position = Vector2( 691.24, 264.309 )
+
+[node name="spawn16" type="Node2D" parent="prize_spawn_container" index="15"]
+
+position = Vector2( 316.393, 193.867 )
+
+[node name="spawn17" type="Node2D" parent="prize_spawn_container" index="16"]
+
+position = Vector2( 142.806, 1069.35 )
+
+[node name="spawn18" type="Node2D" parent="prize_spawn_container" index="17"]
+
+position = Vector2( 266.078, 1408.98 )
+
+[node name="spawn19" type="Node2D" parent="prize_spawn_container" index="18"]
+
+position = Vector2( 540.295, 1886.97 )
+
+[node name="spawn20" type="Node2D" parent="prize_spawn_container" index="19"]
+
+position = Vector2( 940.3, 1869.36 )
+
+[node name="spawn21" type="Node2D" parent="prize_spawn_container" index="20"]
+
+position = Vector2( 457.275, 2317.16 )
+
+[node name="spawn22" type="Node2D" parent="prize_spawn_container" index="21"]
+
+position = Vector2( 1033.38, 2697.04 )
+
+[node name="spawn23" type="Node2D" parent="prize_spawn_container" index="22"]
+
+position = Vector2( 125.196, 2193.89 )
+
+[node name="spawn24" type="Node2D" parent="prize_spawn_container" index="23"]
+
+position = Vector2( 1944.09, 2239.17 )
+
+[node name="spawn25" type="Node2D" parent="prize_spawn_container" index="24"]
+
+position = Vector2( 1954.15, 2699.56 )
+
+[node name="spawn26" type="Node2D" parent="prize_spawn_container" index="25"]
+
+position = Vector2( 2318.93, 2297.04 )
+
+[node name="spawn27" type="Node2D" parent="prize_spawn_container" index="26"]
+
+position = Vector2( 4145.37, 2274.4 )
+
+[node name="spawn28" type="Node2D" parent="prize_spawn_container" index="27"]
+
+position = Vector2( 4175.56, 2754.9 )
+
+[node name="spawn29" type="Node2D" parent="prize_spawn_container" index="28"]
+
+position = Vector2( 3523.98, 2654.27 )
+
+[node name="spawn30" type="Node2D" parent="prize_spawn_container" index="29"]
+
+position = Vector2( 2912.65, 2548.61 )
+
+[node name="spawn31" type="Node2D" parent="prize_spawn_container" index="30"]
+
+position = Vector2( 3242.21, 2752.39 )
+
+[node name="spawn32" type="Node2D" parent="prize_spawn_container" index="31"]
+
+position = Vector2( 5088.78, 2742.33 )
+
+[node name="spawn33" type="Node2D" parent="prize_spawn_container" index="32"]
+
+position = Vector2( 4940.35, 2249.24 )
+
+[node name="spawn34" type="Node2D" parent="prize_spawn_container" index="33"]
+
+position = Vector2( 4696.32, 1937.28 )
+
+[node name="spawn35" type="Node2D" parent="prize_spawn_container" index="34"]
+
+position = Vector2( 4630.91, 2707.1 )
+
+[node name="spawn36" type="Node2D" parent="prize_spawn_container" index="35"]
+
+position = Vector2( 1159.17, 1610.24 )
+
+[node name="spawn37" type="Node2D" parent="prize_spawn_container" index="36"]
+
+position = Vector2( 1951.63, 1856.78 )
+
+[node name="spawn38" type="Node2D" parent="prize_spawn_container" index="37"]
+
+position = Vector2( 1433.39, 782.554 )
+
+[node name="spawn39" type="Node2D" parent="prize_spawn_container" index="38"]
+
+position = Vector2( 1365.46, 266.825 )
 
 [node name="wall_container" type="Node" parent="." index="5"]
 

@@ -48,7 +48,6 @@ scale = Vector2( 2.5, 2.5 )
 z_as_relative = false
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 1
 playing = true
 _sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
 
@@ -61,7 +60,7 @@ shape = SubResource( 2 )
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="." index="2"]
 
 stream = ExtResource( 8 )
-volume_db = 2.0
+volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0

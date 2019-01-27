@@ -47,7 +47,7 @@ use_filter = false
 font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="game" type="Node2D"]
+[node name="game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 max_prizes = 20
@@ -73,8 +73,6 @@ _sections_unfolded = [ "Z Index" ]
 [node name="prize_container" type="Node" parent="." index="3"]
 
 [node name="prize_spawn_container" type="Node" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
 

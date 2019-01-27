@@ -35,8 +35,8 @@ func spawn_prizes():
 		var idx = rand_range(0, children.size())
 		var game_prize = prize.instance()
 		game_prize.connect("collected", self, "_collect_prize")
-		game_prize.position = children[idx].position
 		$prize_container.add_child(game_prize)
+		game_prize.position = children[idx].position - game_prize.get_extents()
 		children.remove(idx)
 
 func _increase_noise(decibels):

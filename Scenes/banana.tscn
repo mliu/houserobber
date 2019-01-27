@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Cute Level/Prize/Book.PNG" type="Texture" id=1]
 
-[node name="necklace1" type="TextureRect"]
+[node name="image" type="TextureRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
