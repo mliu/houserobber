@@ -2,9 +2,9 @@ extends Node
 
 export (int) var max_prizes = 20
 
-onready var tree = preload("res://tree.tscn")
+onready var tree = preload("res://Scenes/tree.tscn")
 onready var timer = $CanvasLayer/Timer
-onready var prize = preload("res://Prize.tscn")
+onready var prize = preload("res://Scenes/Prize.tscn")
 
 var screensize
 var noise_level = 0.0
