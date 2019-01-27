@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://Cute Level.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://analog/analog.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=11]
+[ext_resource path="res://audio/ding.wav" type="AudioStream" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -905,5 +906,14 @@ padname = "rightPad"
 [node name="NoiseItem" parent="." index="9" instance=ExtResource( 11 )]
 
 position = Vector2( 370, 2160 )
+
+[node name="Ding" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 
