@@ -444,9 +444,13 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 120, 50 )
+position = Vector2( 40, 30 )
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Timer" parent="CanvasLayer" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 1112.5, 27.5 )
+scale = Vector2( 0.984375, 0.890625 )
 
 [node name="Dialog" type="Panel" parent="CanvasLayer" index="2"]
 
