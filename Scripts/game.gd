@@ -15,6 +15,10 @@ func _ready():
 	# Dont Allow quitting by x and closing game (set this true in Game Start Screen)
 	# Used to limit quit to Game Start Screen
 #	get_tree().set_auto_accept_quit(false)
+
+	# Hook up noise signals
+	for node in $NoiseItems.get_children():
+		node.connect("make_noise", self, "_increase_noise")
 	
 	randomize()
 	

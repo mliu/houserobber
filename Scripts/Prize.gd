@@ -21,7 +21,6 @@ var selected_scene
 signal collected(prize_node)
 
 func get_extents():
-	print("hi")
 	return $CollisionShape2D.shape.extents
 
 func _ready():
