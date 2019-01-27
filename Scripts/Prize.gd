@@ -1,7 +1,6 @@
 extends Area2D
 
 export var prize_value = 100
-export(String, "cute", "scary") var level_type = Enums.CUTE
 
 var prize_directories = {
 	"cute": {
@@ -10,11 +9,12 @@ var prize_directories = {
 		"book": "res://Scenes/book.tscn"
 	},
 	"scary": {
-		"bear": "res://Scenes/bear.tscn",
-		"banana": "res://Scenes/banana.tscn",
-		"book": "res://Scenes/book.tscn"
+		"bear": "res://Scenes/necklace1.tscn",
+		"banana": "res://Scenes/necklace2.tscn",
+		"book": "res://Scenes/necklace3.tscn"
 	}
 }
+onready var level_type
 var prize_scenes
 var selected_scene
 

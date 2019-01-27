@@ -1,6 +1,7 @@
 extends Node
 
 export (int) var max_prizes = 20
+export(String, "cute", "scary") var level_type = Enums.CUTE
 
 onready var soundplayer = $SoundPlayer
 onready var timer = $CanvasLayer/Timer
@@ -39,6 +40,7 @@ func spawn_prizes():
 	for i in range(max_prizes):
 		var idx = rand_range(0, children.size())
 		var game_prize = prize.instance()
+		game_prize.level_type = level_type
 		game_prize.connect("collected", self, "_collect_prize")
 		$prize_container.add_child(game_prize)
 		game_prize.position = children[idx].position - game_prize.get_extents()
@@ -51,11 +53,12 @@ func _increase_noise(decibels):
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
+	print("COLLECT")
 	soundplayer.get_node("Ding").play()
 	
 func _on_exit():
-	# Only exit if it's past 30 seconds
-	if timer.elapsed > 3 and !$CanvasLayer/Dialog.visible:
+	# Only exit if it's past 15 seconds
+	if timer.elapsed > 15 and !$CanvasLayer/Dialog.visible:
 		get_tree().paused = true
 		$CanvasLayer/Dialog.visible = true
 		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer

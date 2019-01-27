@@ -32,19 +32,18 @@ func _physics_process(delta):
 	# Add in analog_velocity
 	velocity += analog_velocity
 
-	if velocity.x != 0:
+	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		$sprite.play("Walk")
-		$sprite.flip_h = velocity.x < 0
-	
-		
-	elif velocity.y != 0:
-		velocity = velocity.normalized() * speed
-		$sprite.play("Forward")
-	
+#		if !$Footsteps.playing:
+#			$Footsteps.play()
+		if velocity.x != 0:
+			$sprite.play("Walk")
+			$sprite.flip_h = velocity.x < 0
+		elif velocity.y != 0:
+			velocity = velocity.normalized() * speed
+			$sprite.play("Forward")
 	else:
 		$sprite.play("Idle")
-	
 	move_and_slide(velocity)
 	
 func analog_force_change(inForce, inStick):

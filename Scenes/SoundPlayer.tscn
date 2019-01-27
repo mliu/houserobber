@@ -4,15 +4,13 @@
 
 [node name="SoundPlayer" type="Node"]
 
-[node name="Ding" type="AudioStreamPlayer2D" parent="." index="0"]
+[node name="Ding" type="AudioStreamPlayer" parent="." index="0"]
 
 stream = ExtResource( 1 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
+mix_target = 0
 bus = "Master"
-area_mask = 1
 
 
