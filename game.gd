@@ -66,8 +66,9 @@ func _on_exit():
 		$CanvasLayer/Dialog.visible = true
 		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
 		for prize_path in collected_prizes:
-			var prize = load(str(prize_path))
-			grid.add_child(prize.instance())
+			var prize_image = TextureRect.new()
+			prize_image.set_texture(prize_path)
+			grid.add_child(prize_image)
 			yield(get_tree().create_timer(0.25), "timeout")
 		pass
 	
