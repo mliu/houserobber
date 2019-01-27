@@ -7,7 +7,8 @@ var velocity = Vector2(0,0)
 var analog_velocity = Vector2(0,0)
 
 func _ready():
-	pass
+	get_viewport().audio_listener_enable_2d = true
+	#pass
 
 func _physics_process(delta):
 	
@@ -32,9 +33,11 @@ func _physics_process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$sprite.play("WalkRight")
+		$Noises/Footsteps.play()
 		$sprite.flip_h = velocity.x < 0	
 	else:
 		$sprite.play("Idle")
+		$Noises/Footsteps.stop()
 	
 	move_and_slide(velocity)
 	

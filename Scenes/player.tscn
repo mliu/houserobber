@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Cute Level/Player/Player1Idle/Idle1.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Cute Level/Player/Player1Idle/Idle2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Cute Level/Player/Player1Walking/1_left.PNG" type="Texture" id=4]
