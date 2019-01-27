@@ -65,6 +65,7 @@ scale = Vector2( 2.5, 2.5 )
 z_as_relative = false
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 1
 playing = true
 _sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
 

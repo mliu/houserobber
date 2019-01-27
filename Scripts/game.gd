@@ -25,7 +25,10 @@ func _ready():
 	randomize()
 	
 	# play theme
-	soundplayer.get_node("CuteTheme").play()
+	if level_type == Enums.CUTE:
+		soundplayer.get_node("CuteTheme").play()
+	else:
+		soundplayer.get_node("ScaryTheme").play()
 	
 	# get Screensize and determine player size
 	screensize = get_viewport().size
@@ -54,9 +57,6 @@ func spawn_prizes():
 func _increase_noise(decibels):
 	noise_level += decibels
 	$CanvasLayer/HealthBar.on_update_health(noise_level / max_noise_level)
-	# TODO: game over
-	print("noise_level", noise_level)
-	print("max", max_noise_level)
 	if noise_level > max_noise_level:
 		get_tree().paused = true
 		$CanvasLayer/GameOverDialog.visible = true
@@ -64,7 +64,6 @@ func _increase_noise(decibels):
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
-	print("COLLECT")
 	soundplayer.get_node("Ding").play()
 	
 func _on_exit():

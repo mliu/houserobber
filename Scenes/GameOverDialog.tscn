@@ -41,7 +41,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="EscapeDialog" type="Panel"]
+[node name="GameOverDialog" type="Panel" index="0"]
 
 pause_mode = 2
 anchor_left = 0.0

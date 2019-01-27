@@ -1,6 +1,7 @@
 extends Area2D
 
 export var noise = 10
+export (Texture) var active = null
 signal make_noise(decibels)
 
 func _ready():
@@ -13,4 +14,6 @@ func _ready():
 func _process(delta):
 	for b in get_overlapping_bodies(): 
 		if b.is_in_group("player"):
+			if active != null:
+				$TextureRect.texture = active
 			emit_signal("make_noise", noise)

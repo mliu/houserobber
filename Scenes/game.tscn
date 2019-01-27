@@ -45,7 +45,7 @@
 [ext_resource path="res://audio/footstep.wav" type="AudioStream" id=43]
 [ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=44]
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
 max_prizes = 3
@@ -73,6 +73,8 @@ _sections_unfolded = [ "Z Index" ]
 [node name="prize_container" type="Node" parent="." index="3"]
 
 [node name="prize_spawn_container" type="Node" parent="." index="4"]
+
+editor/display_folded = true
 
 [node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
 
@@ -400,6 +402,7 @@ scale = Vector2( 4.96792, 1.8125 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -466,174 +469,211 @@ position = Vector2( 370, 2160 )
 [node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 630, 60 )
+active = null
 
 [node name="NoiseItem26" parent="NoiseItems" index="1" instance=ExtResource( 10 )]
 
 position = Vector2( 2100, -1850 )
+active = null
 
 [node name="NoiseItem2" parent="NoiseItems" index="2" instance=ExtResource( 11 )]
 
 position = Vector2( 1370, -70 )
+active = null
 
 [node name="NoiseItem33" parent="NoiseItems" index="3" instance=ExtResource( 11 )]
 
 position = Vector2( 1720, -1280 )
+active = null
 
 [node name="NoiseItem3" parent="NoiseItems" index="4" instance=ExtResource( 12 )]
 
 position = Vector2( 1830, -580 )
+active = null
 
 [node name="NoiseItem21" parent="NoiseItems" index="5" instance=ExtResource( 12 )]
 
 position = Vector2( 2581.12, -932.363 )
 rotation = 3.31613
 scale = Vector2( 0.656254, 0.656254 )
+active = null
 
 [node name="NoiseItem4" parent="NoiseItems" index="6" instance=ExtResource( 13 )]
 
 position = Vector2( 840, 340 )
+active = null
 
 [node name="NoiseItem5" parent="NoiseItems" index="7" instance=ExtResource( 14 )]
 
 position = Vector2( 2550, 670 )
+active = null
 
 [node name="NoiseItem23" parent="NoiseItems" index="8" instance=ExtResource( 14 )]
 
 position = Vector2( 1410, -1570 )
+active = null
 
 [node name="NoiseItem24" parent="NoiseItems" index="9" instance=ExtResource( 14 )]
 
 position = Vector2( 1530, -1630 )
 scale = Vector2( 0.65625, 0.65625 )
+active = null
 
 [node name="NoiseItem25" parent="NoiseItems" index="10" instance=ExtResource( 14 )]
 
 position = Vector2( 1590, -1540 )
 scale = Vector2( 0.796875, 0.796875 )
+active = null
 
 [node name="NoiseItem6" parent="NoiseItems" index="11" instance=ExtResource( 15 )]
 
 position = Vector2( -250, 520 )
+active = null
 
 [node name="NoiseItem29" parent="NoiseItems" index="12" instance=ExtResource( 15 )]
 
 position = Vector2( 1280, -660 )
+active = null
 
 [node name="NoiseItem32" parent="NoiseItems" index="13" instance=ExtResource( 15 )]
 
 position = Vector2( 1495.65, -531.501 )
 rotation = 0.872665
 scale = Vector2( 0.499998, 0.499998 )
+active = null
 
 [node name="NoiseItem30" parent="NoiseItems" index="14" instance=ExtResource( 15 )]
 
 position = Vector2( 1406.41, -768.745 )
 rotation = 0.523599
 scale = Vector2( 0.499999, 0.499999 )
+active = null
 
 [node name="NoiseItem31" parent="NoiseItems" index="15" instance=ExtResource( 15 )]
 
 position = Vector2( 1504.1, -809.146 )
 rotation = 0.349066
 scale = Vector2( 1.29547, 1.29547 )
+active = null
 
 [node name="NoiseItem7" parent="NoiseItems" index="16" instance=ExtResource( 16 )]
 
 position = Vector2( 590, -770 )
+active = null
 
 [node name="NoiseItem14" parent="NoiseItems" index="17" instance=ExtResource( 16 )]
 
 position = Vector2( -280, -330 )
 scale = Vector2( 0.65625, 0.65625 )
+active = null
 
 [node name="NoiseItem8" parent="NoiseItems" index="18" instance=ExtResource( 17 )]
 
 position = Vector2( 1534, 406 )
 scale = Vector2( 0.8125, 0.8125 )
+active = null
 
 [node name="NoiseItem9" parent="NoiseItems" index="19" instance=ExtResource( 17 )]
 
 position = Vector2( 1770, 270 )
+active = null
 
 [node name="NoiseItem13" parent="NoiseItems" index="20" instance=ExtResource( 17 )]
 
 position = Vector2( 1620, 290 )
 scale = Vector2( 0.656252, 0.656252 )
+active = null
 
 [node name="NoiseItem10" parent="NoiseItems" index="21" instance=ExtResource( 17 )]
 
 position = Vector2( 1710, 400 )
 scale = Vector2( 1.28125, 1.28125 )
+active = null
 
 [node name="NoiseItem11" parent="NoiseItems" index="22" instance=ExtResource( 17 )]
 
 position = Vector2( 1620, 560 )
+active = null
 
 [node name="NoiseItem12" parent="NoiseItems" index="23" instance=ExtResource( 17 )]
 
 position = Vector2( 1820, 580 )
 scale = Vector2( 0.8125, 0.8125 )
+active = null
 
 [node name="NoiseItem15" parent="NoiseItems" index="24" instance=ExtResource( 18 )]
 
 position = Vector2( 2680, 470 )
+active = null
 
 [node name="NoiseItem16" parent="NoiseItems" index="25" instance=ExtResource( 18 )]
 
 position = Vector2( 3340, -90 )
+active = null
 
 [node name="NoiseItem36" parent="NoiseItems" index="26" instance=ExtResource( 18 )]
 
 position = Vector2( 2374.6, -148.377 )
 rotation = 0.174533
 scale = Vector2( 0.34375, 0.34375 )
+active = null
 
 [node name="NoiseItem37" parent="NoiseItems" index="27" instance=ExtResource( 18 )]
 
 position = Vector2( 2520, -10 )
 scale = Vector2( 0.34375, 0.34375 )
+active = null
 
 [node name="NoiseItem17" parent="NoiseItems" index="28" instance=ExtResource( 19 )]
 
 position = Vector2( 3350, 260 )
+active = null
 
 [node name="NoiseItem28" parent="NoiseItems" index="29" instance=ExtResource( 19 )]
 
 position = Vector2( 3110, 80 )
+active = null
 
 [node name="NoiseItem34" parent="NoiseItems" index="30" instance=ExtResource( 19 )]
 
 position = Vector2( 2690.23, 98.7993 )
 rotation = 0.349066
 scale = Vector2( 0.34375, 0.34375 )
+active = null
 
 [node name="NoiseItem35" parent="NoiseItems" index="31" instance=ExtResource( 19 )]
 
 position = Vector2( 2601.35, 50.0225 )
 rotation = 0.174533
 scale = Vector2( 0.34375, 0.34375 )
+active = null
 
 [node name="NoiseItem38" parent="NoiseItems" index="32" instance=ExtResource( 19 )]
 
 position = Vector2( 2440, -70 )
 scale = Vector2( 0.34375, 0.34375 )
+active = null
 
 [node name="NoiseItem27" parent="NoiseItems" index="33" instance=ExtResource( 19 )]
 
 position = Vector2( 3190, 500 )
+active = null
 
 [node name="NoiseItem18" parent="NoiseItems" index="34" instance=ExtResource( 20 )]
 
 position = Vector2( 700, -410 )
+active = null
 
 [node name="NoiseItem19" parent="NoiseItems" index="35" instance=ExtResource( 20 )]
 
 position = Vector2( -340, -1070 )
+active = null
 
 [node name="NoiseItem20" parent="NoiseItems" index="36" instance=ExtResource( 20 )]
 
 position = Vector2( 1130, -1280 )
 scale = Vector2( 0.5, 0.5 )
+active = null
 
 [node name="RegularItem3" parent="." index="9" instance=ExtResource( 21 )]
 
