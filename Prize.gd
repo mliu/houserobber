@@ -4,8 +4,8 @@ export var prize_value = 100
 
 var type
 var prize_types = {
-	"necklace1": "res://necklace1.tscn",
-	"necklace2": "res://necklace2.tscn"
+	"necklace1": "res://Scenes/necklace1.tscn",
+	"necklace2": "res://Scenes/necklace2.tscn"
 }
 
 signal collected(prize_node)
