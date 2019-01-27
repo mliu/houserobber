@@ -50,13 +50,18 @@ _sections_unfolded = [ "Font", "Settings" ]
 [node name="game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
+max_prizes = 20
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
 position = Vector2( -4.54736, -1.51581 )
+rotation = 0.000694654
 texture = ExtResource( 2 )
 centered = false
 _sections_unfolded = [ "Animation", "Offset", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Entrance" parent="." index="1" instance=ExtResource( 3 )]
 
@@ -67,191 +72,333 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="prize_container" type="Node" parent="." index="3"]
 
-[node name="spawn1" type="Node2D" parent="prize_container" index="0"]
+[node name="prize_spawn_container" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
 
 position = Vector2( 165.281, 2838.97 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn2" type="Node2D" parent="prize_container" index="1"]
+[node name="spawn2" type="Node2D" parent="prize_spawn_container" index="1"]
 
 position = Vector2( 545.803, 2842.41 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn3" type="Node2D" parent="prize_container" index="2"]
+[node name="spawn3" type="Node2D" parent="prize_spawn_container" index="2"]
 
 position = Vector2( 762.425, 2841.26 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn4" type="Node2D" parent="prize_container" index="3"]
+[node name="spawn4" type="Node2D" parent="prize_spawn_container" index="3"]
 
 position = Vector2( 1039.79, 2479.08 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn5" type="Node2D" parent="prize_container" index="4"]
+[node name="spawn5" type="Node2D" parent="prize_spawn_container" index="4"]
 
 position = Vector2( 1236.93, 2838.97 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn6" type="Node2D" parent="prize_container" index="5"]
+[node name="spawn6" type="Node2D" parent="prize_spawn_container" index="5"]
 
 position = Vector2( 1466.16, 2835.53 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn7" type="Node2D" parent="prize_container" index="6"]
+[node name="spawn7" type="Node2D" parent="prize_spawn_container" index="6"]
 
 position = Vector2( 556.118, 1734.08 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn8" type="Node2D" parent="prize_container" index="7"]
+[node name="spawn8" type="Node2D" parent="prize_spawn_container" index="7"]
 
 position = Vector2( 896.525, 1812.02 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn9" type="Node2D" parent="prize_container" index="8"]
+[node name="spawn9" type="Node2D" parent="prize_spawn_container" index="8"]
 
 position = Vector2( 1113.15, 1801.7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn10" type="Node2D" parent="prize_container" index="9"]
+[node name="spawn10" type="Node2D" parent="prize_spawn_container" index="9"]
 
 position = Vector2( 2285.66, 2464.18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn11" type="Node2D" parent="prize_container" index="10"]
+[node name="spawn11" type="Node2D" parent="prize_spawn_container" index="10"]
 
 position = Vector2( 2059.87, 2804.59 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn12" type="Node2D" parent="prize_container" index="11"]
+[node name="spawn12" type="Node2D" parent="prize_spawn_container" index="11"]
 
 position = Vector2( 1665.59, 2822.92 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn13" type="Node2D" parent="prize_container" index="12"]
+[node name="spawn13" type="Node2D" parent="prize_spawn_container" index="12"]
 
 position = Vector2( 2290.24, 2808.02 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn14" type="Node2D" parent="prize_container" index="13"]
+[node name="spawn14" type="Node2D" parent="prize_spawn_container" index="13"]
 
 position = Vector2( 2286.81, 2697.99 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn15" type="Node2D" parent="prize_container" index="14"]
+[node name="spawn15" type="Node2D" parent="prize_spawn_container" index="14"]
 
 position = Vector2( 2726.93, 2806.88 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn16" type="Node2D" parent="prize_container" index="15"]
+[node name="spawn16" type="Node2D" parent="prize_spawn_container" index="15"]
 
 position = Vector2( 2956.16, 2489.39 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn17" type="Node2D" parent="prize_container" index="16"]
+[node name="spawn17" type="Node2D" parent="prize_spawn_container" index="16"]
 
 position = Vector2( 2846.13, 2617.76 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn18" type="Node2D" parent="prize_container" index="17"]
+[node name="spawn18" type="Node2D" parent="prize_spawn_container" index="17"]
 
 position = Vector2( 2723.49, 2295.69 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn19" type="Node2D" parent="prize_container" index="18"]
+[node name="spawn19" type="Node2D" parent="prize_spawn_container" index="18"]
 
 position = Vector2( 3087.97, 2292.26 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn20" type="Node2D" parent="prize_container" index="19"]
+[node name="spawn20" type="Node2D" parent="prize_spawn_container" index="19"]
 
 position = Vector2( 3383.67, 1878.5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn21" type="Node2D" parent="prize_container" index="20"]
+[node name="spawn21" type="Node2D" parent="prize_spawn_container" index="20"]
 
 position = Vector2( 3931.53, 2932.95 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn22" type="Node2D" parent="prize_container" index="21"]
+[node name="spawn22" type="Node2D" parent="prize_spawn_container" index="21"]
 
 position = Vector2( 3047.85, 2808.02 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn23" type="Node2D" parent="prize_container" index="22"]
+[node name="spawn23" type="Node2D" parent="prize_spawn_container" index="22"]
 
 position = Vector2( 3538.4, 1697.4 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn24" type="Node2D" parent="prize_container" index="23"]
+[node name="spawn24" type="Node2D" parent="prize_spawn_container" index="23"]
 
 position = Vector2( 2787.67, 1424.62 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn25" type="Node2D" parent="prize_container" index="24"]
+[node name="spawn25" type="Node2D" parent="prize_spawn_container" index="24"]
 
 position = Vector2( 3687.4, 1273.33 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn26" type="Node2D" parent="prize_container" index="25"]
+[node name="spawn26" type="Node2D" parent="prize_spawn_container" index="25"]
 
 position = Vector2( 3678.23, 907.706 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn27" type="Node2D" parent="prize_container" index="26"]
+[node name="spawn27" type="Node2D" parent="prize_spawn_container" index="26"]
 
 position = Vector2( 3902.88, 860.714 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn28" type="Node2D" parent="prize_container" index="27"]
+[node name="spawn28" type="Node2D" parent="prize_spawn_container" index="27"]
 
 position = Vector2( 3532.7, 55.2238 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn29" type="Node2D" parent="prize_container" index="28"]
+[node name="spawn29" type="Node2D" parent="prize_spawn_container" index="28"]
 
 position = Vector2( 2245.05, 402.556 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn43" type="Node2D" parent="prize_container" index="29"]
+[node name="spawn43" type="Node2D" parent="prize_spawn_container" index="29"]
 
 position = Vector2( 1638.73, 390.429 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn44" type="Node2D" parent="prize_container" index="30"]
+[node name="spawn44" type="Node2D" parent="prize_spawn_container" index="30"]
 
 position = Vector2( 1399.24, 434.388 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn45" type="Node2D" parent="prize_container" index="31"]
+[node name="spawn45" type="Node2D" parent="prize_spawn_container" index="31"]
 
 position = Vector2( 1153.68, 863.359 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn46" type="Node2D" parent="prize_container" index="32"]
+[node name="spawn46" type="Node2D" parent="prize_spawn_container" index="32"]
 
 position = Vector2( 158.782, 1440.84 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn30" type="Node2D" parent="prize_container" index="33"]
+[node name="spawn30" type="Node2D" parent="prize_spawn_container" index="33"]
 
 position = Vector2( 1767.47, 147.769 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn31" type="Node2D" parent="prize_container" index="34"]
+[node name="spawn31" type="Node2D" parent="prize_spawn_container" index="34"]
 
 position = Vector2( 908.283, 440.26 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn32" type="Node2D" parent="prize_container" index="35"]
+[node name="spawn32" type="Node2D" parent="prize_spawn_container" index="35"]
 
 position = Vector2( 487.828, 417.409 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn33" type="Node2D" parent="prize_container" index="36"]
+[node name="spawn33" type="Node2D" parent="prize_spawn_container" index="36"]
 
 position = Vector2( 479.83, 888.135 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn34" type="Node2D" parent="prize_container" index="37"]
+[node name="spawn34" type="Node2D" parent="prize_spawn_container" index="37"]
 
 position = Vector2( 105.077, 1196.62 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn35" type="Node2D" parent="prize_container" index="38"]
+[node name="spawn35" type="Node2D" parent="prize_spawn_container" index="38"]
 
 position = Vector2( 1468.13, 929.266 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn36" type="Node2D" parent="prize_container" index="39"]
+[node name="spawn36" type="Node2D" parent="prize_spawn_container" index="39"]
 
 position = Vector2( 1188.2, 1591.94 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn37" type="Node2D" parent="prize_container" index="40"]
+[node name="spawn37" type="Node2D" parent="prize_spawn_container" index="40"]
 
 position = Vector2( 2496.41, 896.133 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn38" type="Node2D" parent="prize_container" index="41"]
+[node name="spawn38" type="Node2D" parent="prize_spawn_container" index="41"]
 
 position = Vector2( 3520.2, 451.684 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn39" type="Node2D" parent="prize_container" index="42"]
+[node name="spawn39" type="Node2D" parent="prize_spawn_container" index="42"]
 
 position = Vector2( 3686.94, 1537.1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn40" type="Node2D" parent="prize_container" index="43"]
+[node name="spawn40" type="Node2D" parent="prize_spawn_container" index="43"]
 
 position = Vector2( 3140.81, 909.843 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn41" type="Node2D" parent="prize_container" index="44"]
+[node name="spawn41" type="Node2D" parent="prize_spawn_container" index="44"]
 
 position = Vector2( 3252.97, 417.209 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="spawn42" type="Node2D" parent="prize_container" index="45"]
+[node name="spawn42" type="Node2D" parent="prize_spawn_container" index="45"]
 
 position = Vector2( 2499.62, 427.819 )
+__meta__ = {
+"_edit_lock_": true
+}
 
-[node name="wall_container" type="Node" parent="." index="4"]
+[node name="wall_container" type="Node" parent="." index="5"]
 
 editor/display_folded = true
 
@@ -427,9 +574,9 @@ scale = Vector2( 2.85216, -1.35429 )
 
 [node name="Wall32" parent="wall_container" index="30" instance=ExtResource( 4 )]
 
-position = Vector2( 1949.71, 2804.1 )
+position = Vector2( 1942.45, 2829.89 )
 rotation = 1.57079
-scale = Vector2( 1.04927, -1.35429 )
+scale = Vector2( 0.729234, -1.35429 )
 
 [node name="Wall35" parent="wall_container" index="31" instance=ExtResource( 4 )]
 
@@ -440,136 +587,124 @@ scale = Vector2( 3.00007, -1.35429 )
 [node name="Wall41" parent="wall_container" index="32" instance=ExtResource( 4 )]
 
 position = Vector2( 3008.32, 2624.55 )
-rotation = 0.925023
+rotation = 2.23649
 scale = Vector2( 3.80709, -1.35429 )
 
 [node name="Wall42" parent="wall_container" index="33" instance=ExtResource( 4 )]
 
 position = Vector2( 3608.6, 1827.61 )
-rotation = 0.925023
+rotation = 2.26286
 scale = Vector2( 3.18145, -1.35429 )
 
 [node name="Wall43" parent="wall_container" index="34" instance=ExtResource( 4 )]
 
 position = Vector2( 2974.19, 1529.72 )
-rotation = 0.925023
+rotation = 2.18716
 scale = Vector2( 1.406, -1.35429 )
 
 [node name="Wall44" parent="wall_container" index="35" instance=ExtResource( 4 )]
 
 position = Vector2( 2625.79, 1414.18 )
-rotation = 0.872663
+rotation = 2.27091
 scale = Vector2( 2.76842, -1.2257 )
 
 [node name="Wall45" parent="wall_container" index="36" instance=ExtResource( 4 )]
 
 position = Vector2( 2558.15, 1560.88 )
-rotation = 2.53073
+rotation = 3.65922
 scale = Vector2( 0.504038, -1.2257 )
 
-[node name="Wall46" parent="wall_container" index="37" instance=ExtResource( 4 )]
-
-position = Vector2( 2882.65, 1599.33 )
-rotation = 2.53073
-scale = Vector2( 0.504038, -1.2257 )
-
-[node name="Wall47" parent="wall_container" index="38" instance=ExtResource( 4 )]
+[node name="Wall47" parent="wall_container" index="37" instance=ExtResource( 4 )]
 
 position = Vector2( 3187.62, 1563.57 )
-rotation = 2.44346
+rotation = 3.81827
 scale = Vector2( 5.23053, -1.33102 )
 
-[node name="Wall48" parent="wall_container" index="39" instance=ExtResource( 4 )]
-
-position = Vector2( 3318.78, 1662.16 )
-rotation = 2.47837
-scale = Vector2( 3.28027, -1.33102 )
-
-[node name="Wall49" parent="wall_container" index="40" instance=ExtResource( 4 )]
+[node name="Wall49" parent="wall_container" index="38" instance=ExtResource( 4 )]
 
 position = Vector2( 3653.51, 1651.15 )
-rotation = 2.47837
+rotation = 3.79489
 scale = Vector2( 0.861118, -1.33102 )
 
-[node name="Wall50" parent="wall_container" index="41" instance=ExtResource( 4 )]
+[node name="Wall50" parent="wall_container" index="39" instance=ExtResource( 4 )]
 
 position = Vector2( 2814.42, 2227.11 )
-rotation = 2.42601
+rotation = 3.8097
 scale = Vector2( 3.91316, -1.33102 )
 
-[node name="Wall51" parent="wall_container" index="42" instance=ExtResource( 4 )]
+[node name="Wall51" parent="wall_container" index="40" instance=ExtResource( 4 )]
 
-position = Vector2( 2791.74, 2730.55 )
-rotation = 2.42601
+position = Vector2( 2790.62, 2730.55 )
+rotation = 3.88135
 scale = Vector2( 1.43154, -1.33102 )
 
-[node name="Wall33" parent="wall_container" index="43" instance=ExtResource( 4 )]
+[node name="Wall33" parent="wall_container" index="41" instance=ExtResource( 4 )]
 
 position = Vector2( 1941.1, 2453.01 )
 rotation = 1.57079
 scale = Vector2( 0.892068, -1.35429 )
 
-[node name="Wall34" parent="wall_container" index="44" instance=ExtResource( 4 )]
+[node name="Wall34" parent="wall_container" index="42" instance=ExtResource( 4 )]
 
 position = Vector2( 1993.04, 2338.83 )
 rotation = 1.57079
 scale = Vector2( 0.798976, -1.16384 )
 
-[node name="Wall18" parent="wall_container" index="45" instance=ExtResource( 4 )]
+[node name="Wall18" parent="wall_container" index="43" instance=ExtResource( 4 )]
 
 position = Vector2( 673.89, 1811.14 )
 rotation = 1.62315
 scale = Vector2( 2.1033, -1.35429 )
 
-[node name="Wall19" parent="wall_container" index="46" instance=ExtResource( 4 )]
+[node name="Wall19" parent="wall_container" index="44" instance=ExtResource( 4 )]
 
 position = Vector2( 1003.64, 1842.09 )
 rotation = 1.62315
 scale = Vector2( 1.54303, -1.35429 )
 
-[node name="Wall16" parent="wall_container" index="47" instance=ExtResource( 4 )]
+[node name="Wall16" parent="wall_container" index="45" instance=ExtResource( 4 )]
 
 position = Vector2( 917.341, 1521.5 )
 rotation = 1.65806
 scale = Vector2( 2.15449, -1.35428 )
 
-[node name="Wall8" parent="wall_container" index="48" instance=ExtResource( 4 )]
+[node name="Wall8" parent="wall_container" index="46" instance=ExtResource( 4 )]
 
 position = Vector2( 2389.28, 392.294 )
 rotation = 1.57079
 scale = Vector2( 1.65768, -1.5759 )
 
-[node name="Wall10" parent="wall_container" index="49" instance=ExtResource( 4 )]
+[node name="Wall10" parent="wall_container" index="47" instance=ExtResource( 4 )]
 
 position = Vector2( 1546.84, 410.646 )
 rotation = 1.57079
 scale = Vector2( 1.65768, -1.5759 )
 
-[node name="Wall11" parent="wall_container" index="50" instance=ExtResource( 4 )]
+[node name="Wall11" parent="wall_container" index="48" instance=ExtResource( 4 )]
 
 position = Vector2( 771.49, 431.008 )
 rotation = 1.57079
 scale = Vector2( 1.3821, -1.5759 )
 
-[node name="Wall13" parent="wall_container" index="51" instance=ExtResource( 4 )]
+[node name="Wall13" parent="wall_container" index="49" instance=ExtResource( 4 )]
 
 position = Vector2( 1296.01, 900.496 )
 rotation = 1.57079
 scale = Vector2( 0.967261, -1.5759 )
 
-[node name="Wall12" parent="wall_container" index="52" instance=ExtResource( 4 )]
+[node name="Wall12" parent="wall_container" index="50" instance=ExtResource( 4 )]
 
 position = Vector2( 376.268, 655.159 )
 rotation = 1.57079
 scale = Vector2( 3.56417, -1.5759 )
 
-[node name="Wall4" parent="wall_container" index="53" instance=ExtResource( 4 )]
+[node name="Wall4" parent="wall_container" index="51" instance=ExtResource( 4 )]
 
 position = Vector2( 847.326, 983.159 )
 rotation = -0.0523599
 scale = Vector2( 4.96792, 1.8125 )
 
-[node name="player" parent="." index="5" instance=ExtResource( 5 )]
+[node name="player" parent="." index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 89.1519, 2182.29 )
 scale = Vector2( 0.04, 0.04 )
@@ -601,7 +736,7 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -640,6 +775,7 @@ max_lines_visible = -1
 
 [node name="Dialog" type="Panel" parent="CanvasLayer" index="2"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -716,7 +852,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 13
 
-[node name="UI" type="CanvasLayer" parent="." index="7"]
+[node name="UI" type="CanvasLayer" parent="." index="8"]
 
 editor/display_folded = true
 layer = 1

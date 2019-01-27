@@ -22,7 +22,7 @@ func _ready():
 	# get Screensize and determine player size
 	screensize = get_viewport().size
 	spawn_trees(rand_range(1,10))
-	spawn_prizes(100)
+	spawn_prizes()
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
@@ -38,16 +38,18 @@ func spawn_trees(num):
 		game_tree.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
 		$tree_container.add_child(game_tree)
 
-func spawn_prizes(num):
-	for child in $prize_container.get_children():
-		
-	for i in range(num):
+func spawn_prizes():
+	if (max_prizes > $prize_spawn_container.get_child_count()):
+		max_prizes = $prize_spawn_container.get_child_count() / 2
+	
+	var children = $prize_spawn_container.get_children()
+	for i in range(max_prizes):
+		var idx = rand_range(0, children.size())
 		var game_prize = prize.instance()
 		game_prize.connect("collected", self, "_collect_prize")
-		
-		# Set Random position of npc
-		game_prize.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
+		game_prize.position = children[idx].position
 		$prize_container.add_child(game_prize)
+		children.remove(idx)
 
 func _increase_noise(decibels):
 	noise_level += decibels
