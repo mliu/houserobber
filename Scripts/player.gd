@@ -39,7 +39,10 @@ func _physics_process(delta):
 		if velocity.x != 0:
 			$sprite.play("Walk")
 			$sprite.flip_h = velocity.x < 0
-		elif velocity.y != 0:
+		elif velocity.y < 0:
+			velocity = velocity.normalized() * speed
+			$sprite.play("Back")
+		elif velocity.y > 0:
 			velocity = velocity.normalized() * speed
 			$sprite.play("Forward")
 	else:
