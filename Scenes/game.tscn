@@ -402,8 +402,6 @@ __meta__ = {
 
 [node name="wall_container" type="Node" parent="." index="5"]
 
-editor/display_folded = true
-
 [node name="LeftBoundary" parent="wall_container" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( -20.2158, 1989.74 )
@@ -716,7 +714,7 @@ scale = Vector2( 4.96792, 1.8125 )
 
 [node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 370, 2150 )
+position = Vector2( 1610, 1540 )
 
 [node name="player" parent="." index="7" instance=ExtResource( 6 )]
 
