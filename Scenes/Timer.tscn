@@ -1,7 +1,47 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Timer.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/timer.png" type="Texture" id=2]
+[ext_resource path="res://ConcertOne-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 30
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Tick"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TimeLeft:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Clock:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -5.0, 5.0 ]
+}
 
 [node name="Timer" type="Node2D" index="0"]
 
@@ -15,7 +55,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 128.0
 margin_bottom = 128.0
-rect_pivot_offset = Vector2( 0, 0 )
+rect_rotation = 0.584256
+rect_pivot_offset = Vector2( 64, 64 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
@@ -25,34 +66,40 @@ texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Margin", "Rect" ]
 
-[node name="TimeLeft" type="RichTextLabel" parent="." index="1"]
+[node name="TimeLeft" type="Label" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 20.0
-margin_top = 53.0
-margin_right = 110.0
-margin_bottom = 93.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
+margin_left = 21.0
+margin_top = 44.0
+margin_right = 111.0
+margin_bottom = 89.0
+rect_scale = Vector2( 1.03042, 1.03042 )
+rect_pivot_offset = Vector2( 44.3654, 22.9773 )
+rect_clip_content = false
+mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-bbcode_text = "[b][center]TEST[/center][/b]"
-visible_characters = -1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.386719, 0.141924, 0.141924, 1 )
+text = "TIME"
+align = 1
 percent_visible = 1.0
-meta_underlined = true
-tab_size = 12
-text = "TEST"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Grow Direction", "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Tick = SubResource( 2 )
+blend_times = [  ]
 
 
