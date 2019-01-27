@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/Scary Level/Items/necklace2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Cute Level/Prize/Anim8.PNG" type="Texture" id=1]
 
-[node name="necklace2" type="TextureRect" index="0"]
+[node name="necklace1" type="TextureRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0

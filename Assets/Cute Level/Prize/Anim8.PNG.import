@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Book.PNG-b0eee1989153b6cba95467b3bf53bd77.stex"
+path="res://.import/Anim8.PNG-c0ab33bd6459391723d220e7d96d9490.stex"
 
 [deps]
 
-source_file="res://Assets/Cute Level/Items/Book.PNG"
-dest_files=[ "res://.import/Book.PNG-b0eee1989153b6cba95467b3bf53bd77.stex" ]
+source_file="res://Assets/Cute Level/Prize/Anim8.PNG"
+dest_files=[ "res://.import/Anim8.PNG-c0ab33bd6459391723d220e7d96d9490.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg.jpg-be0bbb7afea23fe3e63b8f540e0adfdd.stex"
+path="res://.import/bg2.png-a3ffecd7434a2647c6e587e478cbe003.stex"
 
 [deps]
 
-source_file="res://bg.jpg"
-dest_files=[ "res://.import/bg.jpg-be0bbb7afea23fe3e63b8f540e0adfdd.stex" ]
+source_file="res://Assets/Scary Level/bg2.png"
+dest_files=[ "res://.import/bg2.png-a3ffecd7434a2647c6e587e478cbe003.stex" ]
 
 [params]
 

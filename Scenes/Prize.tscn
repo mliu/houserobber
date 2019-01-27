@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Scripts/Prize.gd" type="Script" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -21,6 +20,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 prize_value = 100
+level_type = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

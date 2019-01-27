@@ -2,7 +2,6 @@ extends Node
 
 export (int) var max_prizes = 20
 
-onready var tree = preload("res://Scenes/tree.tscn")
 onready var timer = $CanvasLayer/Timer
 onready var prize = preload("res://Scenes/Prize.tscn")
 
@@ -21,22 +20,11 @@ func _ready():
 	
 	# get Screensize and determine player size
 	screensize = get_viewport().size
-	spawn_trees(rand_range(1,10))
 	spawn_prizes()
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
 	pass
-
-func spawn_trees(num):	
-	for i in range(num):
-		var game_tree = tree.instance()
-		game_tree.connect("make_noise", self, "_increase_noise")
-		game_tree.set_scale(Vector2(2,2))
-		
-		# Set Random position of npc
-		game_tree.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
-		$tree_container.add_child(game_tree)
 
 func spawn_prizes():
 	if (max_prizes > $prize_spawn_container.get_child_count()):
@@ -66,8 +54,7 @@ func _on_exit():
 		$CanvasLayer/Dialog.visible = true
 		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
 		for prize_path in collected_prizes:
-			var prize_image = TextureRect.new()
-			prize_image.set_texture(prize_path)
+			var prize_image = load(prize_path).instance()
 			grid.add_child(prize_image)
 			yield(get_tree().create_timer(0.25), "timeout")
 		pass

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg2.png-5c601f4bed2e00a3a036602a0714f2ab.stex"
+path="res://.import/Banana.PNG-69d3b0a2bbe6c2243513a7aa646d0c0b.stex"
 
 [deps]
 
-source_file="res://images/bg2.png"
-dest_files=[ "res://.import/bg2.png-5c601f4bed2e00a3a036602a0714f2ab.stex" ]
+source_file="res://Assets/Cute Level/Prize/Banana.PNG"
+dest_files=[ "res://.import/Banana.PNG-69d3b0a2bbe6c2243513a7aa646d0c0b.stex" ]
 
 [params]
 
