@@ -24,6 +24,9 @@ func _ready():
 	
 	randomize()
 	
+	# play theme
+	soundplayer.get_node("CuteTheme").play()
+	
 	# get Screensize and determine player size
 	screensize = get_viewport().size
 	spawn_prizes()
