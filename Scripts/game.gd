@@ -50,6 +50,7 @@ func _increase_noise(decibels):
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
+	$Ding.play()
 	
 func _on_exit():
 	# Only exit if it's past 30 seconds

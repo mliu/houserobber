@@ -1,16 +1,17 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://Cute Level.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Boundary.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://audio/footstep.wav" type="AudioStream" id=7]
-[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=9]
-[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://audio/footstep.wav" type="AudioStream" id=6]
+[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=8]
+[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=11]
+[ext_resource path="res://audio/ding.wav" type="AudioStream" id=12]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -46,7 +47,7 @@ _sections_unfolded = [ "Corner Radius" ]
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="game" type="Node2D" index="0"]
@@ -60,7 +61,7 @@ position = Vector2( -4.54736, -1.51581 )
 rotation = 0.000694654
 texture = ExtResource( 2 )
 centered = false
-_sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -75,8 +76,6 @@ _sections_unfolded = [ "Z Index" ]
 [node name="prize_container" type="Node" parent="." index="3"]
 
 [node name="prize_spawn_container" type="Node" parent="." index="4"]
-
-editor/display_folded = true
 
 [node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
 
@@ -710,13 +709,7 @@ position = Vector2( 847.326, 983.159 )
 rotation = -0.0523599
 scale = Vector2( 4.96792, 1.8125 )
 
-[node name="NoiseItems" type="Node2D" parent="." index="6"]
-
-[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 5 )]
-
-position = Vector2( 1610, 1540 )
-
-[node name="player" parent="." index="7" instance=ExtResource( 6 )]
+[node name="player" parent="." index="6" instance=ExtResource( 5 )]
 
 position = Vector2( 89.1519, 2182.29 )
 scale = Vector2( 0.04, 0.04 )
@@ -750,7 +743,7 @@ _sections_unfolded = [ "Limit" ]
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="player" index="3"]
 
-stream = ExtResource( 7 )
+stream = ExtResource( 6 )
 volume_db = 10.0
 pitch_scale = 1.0
 autoplay = false
@@ -760,7 +753,7 @@ bus = "Master"
 area_mask = 1
 _sections_unfolded = [ "Visibility" ]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -768,14 +761,14 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 8 )]
+[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
 
 position = Vector2( 10, 10.8091 )
 
 [node name="Timer" type="Node" parent="CanvasLayer" index="1"]
 
 editor/display_folded = true
-script = ExtResource( 9 )
+script = ExtResource( 8 )
 
 [node name="TimeLeft" type="Label" parent="CanvasLayer/Timer" index="0"]
 
@@ -876,7 +869,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 13
 
-[node name="UI" type="CanvasLayer" parent="." index="9"]
+[node name="UI" type="CanvasLayer" parent="." index="8"]
 
 editor/display_folded = true
 layer = 1
@@ -903,11 +896,24 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Grow Direction", "Rect", "Visibility" ]
 
-[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 11 )]
+[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 64.2845, 496.744 )
 isDynamicallyShowing = true
 listenerNodePath = "/root/game/player"
 padname = "rightPad"
+
+[node name="NoiseItem" parent="." index="9" instance=ExtResource( 11 )]
+
+position = Vector2( 370, 2160 )
+
+[node name="Ding" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 
