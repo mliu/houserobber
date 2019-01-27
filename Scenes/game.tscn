@@ -1,29 +1,50 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://Cute Level.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Boundary.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://audio/footstep.wav" type="AudioStream" id=6]
-[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=8]
-[ext_resource path="res://Assets/timer.png" type="Texture" id=9]
-[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim4.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim5.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim6.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim7.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim9.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim10.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Anim11.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Doormat.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/BunnyBed.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/CatHuman.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/FlowerCat.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/HumanBed.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Ivy.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P1.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P2.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P3.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P8.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P9.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P10.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Table.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P4.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P5.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P6.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/P7.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Shrooms.tscn" type="PackedScene" id=37]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Slippers.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Toilet.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Scenes/Cute Level/Items/Furniture/Snake.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=41]
+[ext_resource path="res://audio/footstep.wav" type="AudioStream" id=42]
+[ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=43]
 
-[sub_resource type="BitmapFont" id=1]
-
-textures = [  ]
-chars = PoolIntArray(  )
-kernings = PoolIntArray(  )
-height = 1.0
-ascent = 0.0
-distance_field = false
-
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -52,19 +73,18 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="game" type="Node2D"]
+[node name="game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-max_prizes = 10
-level_type = "cute"
+max_prizes = 3
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
@@ -79,7 +99,8 @@ __meta__ = {
 
 [node name="Entrance" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 93.1446, 2195.5 )
+position = Vector2( -26.8554, 2190.75 )
+scale = Vector2( 1, 1.36719 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="tree_container" type="Node" parent="." index="2"]
@@ -88,326 +109,17 @@ _sections_unfolded = [ "Z Index" ]
 
 [node name="prize_spawn_container" type="Node" parent="." index="4"]
 
-editor/display_folded = true
-
 [node name="spawn1" type="Node2D" parent="prize_spawn_container" index="0"]
 
-position = Vector2( 165.281, 2838.97 )
+position = Vector2( 1730, 2610 )
 
 [node name="spawn2" type="Node2D" parent="prize_spawn_container" index="1"]
 
-position = Vector2( 545.803, 2842.41 )
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 2770, 1450 )
 
 [node name="spawn3" type="Node2D" parent="prize_spawn_container" index="2"]
 
-position = Vector2( 762.425, 2841.26 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn4" type="Node2D" parent="prize_spawn_container" index="3"]
-
-position = Vector2( 1039.79, 2479.08 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn5" type="Node2D" parent="prize_spawn_container" index="4"]
-
-position = Vector2( 1236.93, 2838.97 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn6" type="Node2D" parent="prize_spawn_container" index="5"]
-
-position = Vector2( 1466.16, 2835.53 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn7" type="Node2D" parent="prize_spawn_container" index="6"]
-
-position = Vector2( 556.118, 1734.08 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn8" type="Node2D" parent="prize_spawn_container" index="7"]
-
-position = Vector2( 896.525, 1812.02 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn9" type="Node2D" parent="prize_spawn_container" index="8"]
-
-position = Vector2( 1113.15, 1801.7 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn10" type="Node2D" parent="prize_spawn_container" index="9"]
-
-position = Vector2( 2285.66, 2464.18 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn11" type="Node2D" parent="prize_spawn_container" index="10"]
-
-position = Vector2( 2059.87, 2804.59 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn12" type="Node2D" parent="prize_spawn_container" index="11"]
-
-position = Vector2( 1665.59, 2822.92 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn13" type="Node2D" parent="prize_spawn_container" index="12"]
-
-position = Vector2( 2290.24, 2808.02 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn14" type="Node2D" parent="prize_spawn_container" index="13"]
-
-position = Vector2( 2286.81, 2697.99 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn15" type="Node2D" parent="prize_spawn_container" index="14"]
-
-position = Vector2( 2726.93, 2806.88 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn16" type="Node2D" parent="prize_spawn_container" index="15"]
-
-position = Vector2( 2956.16, 2489.39 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn17" type="Node2D" parent="prize_spawn_container" index="16"]
-
-position = Vector2( 2846.13, 2617.76 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn18" type="Node2D" parent="prize_spawn_container" index="17"]
-
-position = Vector2( 2723.49, 2295.69 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn19" type="Node2D" parent="prize_spawn_container" index="18"]
-
-position = Vector2( 3087.97, 2292.26 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn20" type="Node2D" parent="prize_spawn_container" index="19"]
-
-position = Vector2( 3383.67, 1878.5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn21" type="Node2D" parent="prize_spawn_container" index="20"]
-
-position = Vector2( 3931.53, 2932.95 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn22" type="Node2D" parent="prize_spawn_container" index="21"]
-
-position = Vector2( 3047.85, 2808.02 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn23" type="Node2D" parent="prize_spawn_container" index="22"]
-
-position = Vector2( 3538.4, 1697.4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn24" type="Node2D" parent="prize_spawn_container" index="23"]
-
-position = Vector2( 2787.67, 1424.62 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn25" type="Node2D" parent="prize_spawn_container" index="24"]
-
-position = Vector2( 3687.4, 1273.33 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn26" type="Node2D" parent="prize_spawn_container" index="25"]
-
-position = Vector2( 3678.23, 907.706 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn27" type="Node2D" parent="prize_spawn_container" index="26"]
-
-position = Vector2( 3902.88, 860.714 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn28" type="Node2D" parent="prize_spawn_container" index="27"]
-
-position = Vector2( 3532.7, 55.2238 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn29" type="Node2D" parent="prize_spawn_container" index="28"]
-
-position = Vector2( 2245.05, 402.556 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn43" type="Node2D" parent="prize_spawn_container" index="29"]
-
-position = Vector2( 1638.73, 390.429 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn44" type="Node2D" parent="prize_spawn_container" index="30"]
-
-position = Vector2( 1399.24, 434.388 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn45" type="Node2D" parent="prize_spawn_container" index="31"]
-
-position = Vector2( 1153.68, 863.359 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn46" type="Node2D" parent="prize_spawn_container" index="32"]
-
-position = Vector2( 158.782, 1440.84 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn30" type="Node2D" parent="prize_spawn_container" index="33"]
-
-position = Vector2( 1767.47, 147.769 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn31" type="Node2D" parent="prize_spawn_container" index="34"]
-
-position = Vector2( 908.283, 440.26 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn32" type="Node2D" parent="prize_spawn_container" index="35"]
-
-position = Vector2( 487.828, 417.409 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn33" type="Node2D" parent="prize_spawn_container" index="36"]
-
-position = Vector2( 479.83, 888.135 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn34" type="Node2D" parent="prize_spawn_container" index="37"]
-
-position = Vector2( 105.077, 1196.62 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn35" type="Node2D" parent="prize_spawn_container" index="38"]
-
-position = Vector2( 1468.13, 929.266 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn36" type="Node2D" parent="prize_spawn_container" index="39"]
-
-position = Vector2( 1188.2, 1591.94 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn37" type="Node2D" parent="prize_spawn_container" index="40"]
-
-position = Vector2( 2496.41, 896.133 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn38" type="Node2D" parent="prize_spawn_container" index="41"]
-
-position = Vector2( 3520.2, 451.684 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn39" type="Node2D" parent="prize_spawn_container" index="42"]
-
-position = Vector2( 3686.94, 1537.1 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn40" type="Node2D" parent="prize_spawn_container" index="43"]
-
-position = Vector2( 3140.81, 909.843 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn41" type="Node2D" parent="prize_spawn_container" index="44"]
-
-position = Vector2( 3252.97, 417.209 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="spawn42" type="Node2D" parent="prize_spawn_container" index="45"]
-
-position = Vector2( 2499.62, 427.819 )
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 710, 780 )
 
 [node name="wall_container" type="Node" parent="." index="5"]
 
@@ -721,117 +433,19 @@ position = Vector2( 847.326, 983.159 )
 rotation = -0.0523599
 scale = Vector2( 4.96792, 1.8125 )
 
-[node name="player" parent="." index="6" instance=ExtResource( 5 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
 
-editor/display_folded = true
-position = Vector2( 89.1519, 2182.29 )
-scale = Vector2( 0.04, 0.04 )
-_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
-
-[node name="Camera2D" type="Camera2D" parent="player" index="2"]
-
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 1, 1 )
-limit_left = 0
-limit_top = 0
-limit_right = 4000
-limit_bottom = 3000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Limit", "Transform" ]
-
-[node name="Footsteps" type="AudioStreamPlayer2D" parent="player" index="3"]
-
-stream = ExtResource( 6 )
-volume_db = 10.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
-_sections_unfolded = [ "Visibility" ]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
-
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
+[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 10, 10.8091 )
+position = Vector2( 120, 50 )
 
-[node name="Timer" type="Node" parent="CanvasLayer" index="1"]
-
-script = ExtResource( 8 )
-
-[node name="Timer" type="TextureRect" parent="CanvasLayer/Timer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = 80.0
-margin_right = 161.0
-margin_bottom = 215.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 9 )
-expand = true
-stretch_mode = 0
-
-[node name="TimeLeft" type="RichTextLabel" parent="CanvasLayer/Timer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 61.0
-margin_top = 133.0
-margin_right = 131.0
-margin_bottom = 173.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/mono_font = SubResource( 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = ""
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "Margin", "custom_colors" ]
+[node name="Timer" parent="CanvasLayer" index="1" instance=ExtResource( 6 )]
 
 [node name="Dialog" type="Panel" parent="CanvasLayer" index="2"]
 
@@ -851,7 +465,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 _sections_unfolded = [ "custom_styles" ]
 
 [node name="ScreenContainer" type="VBoxContainer" parent="CanvasLayer/Dialog" index="0"]
@@ -887,7 +501,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "You Escaped!"
 align = 1
 percent_visible = 1.0
@@ -912,8 +526,9 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 columns = 13
 
-[node name="UI" type="CanvasLayer" parent="." index="8"]
+[node name="UI" type="CanvasLayer" parent="." index="7"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -938,20 +553,365 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Grow Direction", "Rect", "Size Flags", "Theme" ]
 
-[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 11 )]
+[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 8 )]
 
 position = Vector2( 64.2845, 496.744 )
 isDynamicallyShowing = true
 listenerNodePath = "/root/game/player"
 padname = "rightPad"
 
-[node name="NoiseItems" type="Node2D" parent="." index="9"]
+[node name="NoiseItems" type="Node2D" parent="." index="8"]
 
 editor/display_folded = true
 position = Vector2( 370, 2160 )
 
-[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 12 )]
+[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 9 )]
 
-[node name="SoundPlayer" parent="." index="10" instance=ExtResource( 13 )]
+position = Vector2( 630, 60 )
+
+[node name="NoiseItem26" parent="NoiseItems" index="1" instance=ExtResource( 9 )]
+
+position = Vector2( 2100, -1850 )
+
+[node name="NoiseItem2" parent="NoiseItems" index="2" instance=ExtResource( 10 )]
+
+position = Vector2( 1370, -70 )
+
+[node name="NoiseItem33" parent="NoiseItems" index="3" instance=ExtResource( 10 )]
+
+position = Vector2( 1720, -1280 )
+
+[node name="NoiseItem3" parent="NoiseItems" index="4" instance=ExtResource( 11 )]
+
+position = Vector2( 1830, -580 )
+
+[node name="NoiseItem21" parent="NoiseItems" index="5" instance=ExtResource( 11 )]
+
+position = Vector2( 2581.12, -932.363 )
+rotation = 3.31613
+scale = Vector2( 0.656254, 0.656254 )
+
+[node name="NoiseItem4" parent="NoiseItems" index="6" instance=ExtResource( 12 )]
+
+position = Vector2( 840, 340 )
+
+[node name="NoiseItem5" parent="NoiseItems" index="7" instance=ExtResource( 13 )]
+
+position = Vector2( 2550, 670 )
+
+[node name="NoiseItem23" parent="NoiseItems" index="8" instance=ExtResource( 13 )]
+
+position = Vector2( 1410, -1570 )
+
+[node name="NoiseItem24" parent="NoiseItems" index="9" instance=ExtResource( 13 )]
+
+position = Vector2( 1530, -1630 )
+scale = Vector2( 0.65625, 0.65625 )
+
+[node name="NoiseItem25" parent="NoiseItems" index="10" instance=ExtResource( 13 )]
+
+position = Vector2( 1590, -1540 )
+scale = Vector2( 0.796875, 0.796875 )
+
+[node name="NoiseItem6" parent="NoiseItems" index="11" instance=ExtResource( 14 )]
+
+position = Vector2( -250, 520 )
+
+[node name="NoiseItem29" parent="NoiseItems" index="12" instance=ExtResource( 14 )]
+
+position = Vector2( 1280, -660 )
+
+[node name="NoiseItem32" parent="NoiseItems" index="13" instance=ExtResource( 14 )]
+
+position = Vector2( 1495.65, -531.501 )
+rotation = 0.872665
+scale = Vector2( 0.499998, 0.499998 )
+
+[node name="NoiseItem30" parent="NoiseItems" index="14" instance=ExtResource( 14 )]
+
+position = Vector2( 1406.41, -768.745 )
+rotation = 0.523599
+scale = Vector2( 0.499999, 0.499999 )
+
+[node name="NoiseItem31" parent="NoiseItems" index="15" instance=ExtResource( 14 )]
+
+position = Vector2( 1504.1, -809.146 )
+rotation = 0.349066
+scale = Vector2( 1.29547, 1.29547 )
+
+[node name="NoiseItem7" parent="NoiseItems" index="16" instance=ExtResource( 15 )]
+
+position = Vector2( 590, -770 )
+
+[node name="NoiseItem14" parent="NoiseItems" index="17" instance=ExtResource( 15 )]
+
+position = Vector2( -280, -330 )
+scale = Vector2( 0.65625, 0.65625 )
+
+[node name="NoiseItem8" parent="NoiseItems" index="18" instance=ExtResource( 16 )]
+
+position = Vector2( 1534, 406 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="NoiseItem9" parent="NoiseItems" index="19" instance=ExtResource( 16 )]
+
+position = Vector2( 1770, 270 )
+
+[node name="NoiseItem13" parent="NoiseItems" index="20" instance=ExtResource( 16 )]
+
+position = Vector2( 1620, 290 )
+scale = Vector2( 0.656252, 0.656252 )
+
+[node name="NoiseItem10" parent="NoiseItems" index="21" instance=ExtResource( 16 )]
+
+position = Vector2( 1710, 400 )
+scale = Vector2( 1.28125, 1.28125 )
+
+[node name="NoiseItem11" parent="NoiseItems" index="22" instance=ExtResource( 16 )]
+
+position = Vector2( 1620, 560 )
+
+[node name="NoiseItem12" parent="NoiseItems" index="23" instance=ExtResource( 16 )]
+
+position = Vector2( 1820, 580 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="NoiseItem15" parent="NoiseItems" index="24" instance=ExtResource( 17 )]
+
+position = Vector2( 2680, 470 )
+
+[node name="NoiseItem16" parent="NoiseItems" index="25" instance=ExtResource( 17 )]
+
+position = Vector2( 3340, -90 )
+
+[node name="NoiseItem36" parent="NoiseItems" index="26" instance=ExtResource( 17 )]
+
+position = Vector2( 2374.6, -148.377 )
+rotation = 0.174533
+scale = Vector2( 0.34375, 0.34375 )
+
+[node name="NoiseItem37" parent="NoiseItems" index="27" instance=ExtResource( 17 )]
+
+position = Vector2( 2520, -10 )
+scale = Vector2( 0.34375, 0.34375 )
+
+[node name="NoiseItem17" parent="NoiseItems" index="28" instance=ExtResource( 18 )]
+
+position = Vector2( 3350, 260 )
+
+[node name="NoiseItem28" parent="NoiseItems" index="29" instance=ExtResource( 18 )]
+
+position = Vector2( 3110, 80 )
+
+[node name="NoiseItem34" parent="NoiseItems" index="30" instance=ExtResource( 18 )]
+
+position = Vector2( 2690.23, 98.7993 )
+rotation = 0.349066
+scale = Vector2( 0.34375, 0.34375 )
+
+[node name="NoiseItem35" parent="NoiseItems" index="31" instance=ExtResource( 18 )]
+
+position = Vector2( 2601.35, 50.0225 )
+rotation = 0.174533
+scale = Vector2( 0.34375, 0.34375 )
+
+[node name="NoiseItem38" parent="NoiseItems" index="32" instance=ExtResource( 18 )]
+
+position = Vector2( 2440, -70 )
+scale = Vector2( 0.34375, 0.34375 )
+
+[node name="NoiseItem27" parent="NoiseItems" index="33" instance=ExtResource( 18 )]
+
+position = Vector2( 3190, 500 )
+
+[node name="NoiseItem18" parent="NoiseItems" index="34" instance=ExtResource( 19 )]
+
+position = Vector2( 700, -410 )
+
+[node name="NoiseItem19" parent="NoiseItems" index="35" instance=ExtResource( 19 )]
+
+position = Vector2( -340, -1070 )
+
+[node name="NoiseItem20" parent="NoiseItems" index="36" instance=ExtResource( 19 )]
+
+position = Vector2( 1130, -1280 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="RegularItem3" parent="." index="9" instance=ExtResource( 20 )]
+
+position = Vector2( 81.9592, 2033.9 )
+rotation = 1.5708
+scale = Vector2( 1.4643, 1.4643 )
+
+[node name="Furniture_Container" type="Node2D" parent="." index="10"]
+
+position = Vector2( 370, 2160 )
+
+[node name="RegularItem" parent="Furniture_Container" index="0" instance=ExtResource( 21 )]
+
+position = Vector2( 2455.05, -400.907 )
+rotation = -0.837758
+
+[node name="RegularItem2" parent="Furniture_Container" index="1" instance=ExtResource( 22 )]
+
+position = Vector2( 390, -420 )
+
+[node name="RegularItem4" parent="Furniture_Container" index="2" instance=ExtResource( 23 )]
+
+position = Vector2( 2840, -1290 )
+
+[node name="RegularItem5" parent="Furniture_Container" index="3" instance=ExtResource( 24 )]
+
+position = Vector2( 2341.23, 89.3323 )
+rotation = 0.698132
+
+[node name="RegularItem6" parent="Furniture_Container" index="4" instance=ExtResource( 25 )]
+
+position = Vector2( 587, -2140 )
+scale = Vector2( 0.65625, 0.65625 )
+
+[node name="RegularItem7" parent="Furniture_Container" index="5" instance=ExtResource( 26 )]
+
+position = Vector2( 540, 420 )
+
+[node name="RegularItem8" parent="Furniture_Container" index="6" instance=ExtResource( 27 )]
+
+position = Vector2( 2220, 560 )
+
+[node name="RegularItem23" parent="Furniture_Container" index="7" instance=ExtResource( 27 )]
+
+position = Vector2( 2126.11, 570.075 )
+rotation = 0.523599
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="RegularItem26" parent="Furniture_Container" index="8" instance=ExtResource( 27 )]
+
+position = Vector2( 3159.89, -526.5 )
+rotation = 0.523599
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="RegularItem24" parent="Furniture_Container" index="9" instance=ExtResource( 27 )]
+
+position = Vector2( 2166.01, 512.354 )
+rotation = 0.349066
+scale = Vector2( 0.533202, 0.533202 )
+
+[node name="RegularItem9" parent="Furniture_Container" index="10" instance=ExtResource( 28 )]
+
+position = Vector2( 2890, -330 )
+
+[node name="RegularItem27" parent="Furniture_Container" index="11" instance=ExtResource( 28 )]
+
+position = Vector2( -280, -610 )
+scale = Vector2( 0.484374, 0.484374 )
+
+[node name="RegularItem14" parent="Furniture_Container" index="12" instance=ExtResource( 29 )]
+
+position = Vector2( 2510, -1960 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="RegularItem15" parent="Furniture_Container" index="13" instance=ExtResource( 30 )]
+
+position = Vector2( 2650, -1960 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="RegularItem16" parent="Furniture_Container" index="14" instance=ExtResource( 31 )]
+
+position = Vector2( 2787, -1963 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="RegularItem17" parent="Furniture_Container" index="15" instance=ExtResource( 32 )]
+
+position = Vector2( 1229.65, -1162.49 )
+rotation = -1.5708
+
+[node name="RegularItem10" parent="Furniture_Container" index="16" instance=ExtResource( 33 )]
+
+position = Vector2( -60, 450 )
+
+[node name="RegularItem25" parent="Furniture_Container" index="17" instance=ExtResource( 33 )]
+
+position = Vector2( 3310, -2120 )
+
+[node name="RegularItem11" parent="Furniture_Container" index="18" instance=ExtResource( 34 )]
+
+position = Vector2( 2250, 183 )
+
+[node name="RegularItem12" parent="Furniture_Container" index="19" instance=ExtResource( 35 )]
+
+position = Vector2( 1310, -1340 )
+
+[node name="RegularItem13" parent="Furniture_Container" index="20" instance=ExtResource( 36 )]
+
+position = Vector2( 2685, -432 )
+
+[node name="RegularItem18" parent="Furniture_Container" index="21" instance=ExtResource( 37 )]
+
+position = Vector2( 130, -470 )
+
+[node name="RegularItem19" parent="Furniture_Container" index="22" instance=ExtResource( 37 )]
+
+position = Vector2( 70, -1560 )
+
+[node name="RegularItem20" parent="Furniture_Container" index="23" instance=ExtResource( 38 )]
+
+position = Vector2( -200, 143.723 )
+rotation = 1.5708
+
+[node name="RegularItem21" parent="Furniture_Container" index="24" instance=ExtResource( 39 )]
+
+position = Vector2( 350, 600 )
+
+[node name="RegularItem22" parent="Furniture_Container" index="25" instance=ExtResource( 40 )]
+
+position = Vector2( 1240, 590 )
+scale = Vector2( 0.8125, 0.8125 )
+
+[node name="player" parent="." index="11" instance=ExtResource( 41 )]
+
+editor/display_folded = true
+position = Vector2( 100, 2180 )
+scale = Vector2( 0.04, 0.04 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+
+[node name="Camera2D" type="Camera2D" parent="player" index="2"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = 0
+limit_top = 0
+limit_right = 4000
+limit_bottom = 3000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Limit" ]
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="player" index="3"]
+
+stream = ExtResource( 42 )
+volume_db = 10.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="SoundPlayer" parent="." index="12" instance=ExtResource( 43 )]
 
 
