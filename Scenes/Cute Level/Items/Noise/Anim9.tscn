@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/NoiseItem.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Cute Level/Items/Anim5.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Cute Level/Items/Anim9.PNG" type="Texture" id=2]
 
 [node name="NoiseItem" index="0" instance=ExtResource( 1 )]
 
