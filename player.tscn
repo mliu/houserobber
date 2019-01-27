@@ -3,14 +3,14 @@
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://Animations/Player1Idle/Idle1.png" type="Texture" id=2]
 [ext_resource path="res://Animations/Player1Idle/Idle2.png" type="Texture" id=3]
-[ext_resource path="res://Animations/Player1Walking/1_left.PNG" type="Texture" id=4]
-[ext_resource path="res://Animations/Player1Walking/2_left.PNG" type="Texture" id=5]
-[ext_resource path="res://Animations/Player1Walking/3_left.PNG" type="Texture" id=6]
-[ext_resource path="res://Animations/Player1Walking/4_left.PNG" type="Texture" id=7]
-[ext_resource path="res://Animations/Player1Walking/1_right.png" type="Texture" id=8]
-[ext_resource path="res://Animations/Player1Walking/2_right.png" type="Texture" id=9]
-[ext_resource path="res://Animations/Player1Walking/3_right.png" type="Texture" id=10]
-[ext_resource path="res://Animations/Player1Walking/4_right.png" type="Texture" id=11]
+[ext_resource path="res://Animations/Player1Walking/1_right.png" type="Texture" id=4]
+[ext_resource path="res://Animations/Player1Walking/2_right.png" type="Texture" id=5]
+[ext_resource path="res://Animations/Player1Walking/3_right.png" type="Texture" id=6]
+[ext_resource path="res://Animations/Player1Walking/4_right.png" type="Texture" id=7]
+[ext_resource path="res://Animations/Player1Walking/1_left.PNG" type="Texture" id=8]
+[ext_resource path="res://Animations/Player1Walking/2_left.PNG" type="Texture" id=9]
+[ext_resource path="res://Animations/Player1Walking/3_left.PNG" type="Texture" id=10]
+[ext_resource path="res://Animations/Player1Walking/4_left.PNG" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -22,12 +22,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "WalkLeft",
+"name": "Walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "WalkRight",
+"name": "WalkLeft",
 "speed": 5.0
 } ]
 
@@ -36,7 +36,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="player" type="KinematicBody2D" groups=[
+[node name="player" type="KinematicBody2D" index="0" groups=[
 "player",
 ]]
 
@@ -55,7 +55,7 @@ speed = 300
 scale = Vector2( 2.5, 2.5 )
 z_as_relative = false
 frames = SubResource( 1 )
-animation = "Idle"
+animation = "2Walk"
 _sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

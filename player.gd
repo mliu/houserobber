@@ -31,24 +31,10 @@ func _physics_process(delta):
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-	if velocity.x > 0:
-		$sprite.play("WalkRight")
-	elif velocity.x < 0:
-		$sprite.play("WalkLeft")
-	elif velocity.y != 0:
-		$sprite.play("Idle")	
+		$sprite.play("Walk")
+		$sprite.flip_h = velocity.x < 0	
 	else:
 		$sprite.play("Idle")
-		# No idle animations
-#		if $sprite/anim.current_animation == "Right":
-#			$sprite/anim.play("Idle-Right")
-#		if $sprite/anim.current_animation == "Left":
-#			$sprite/anim.play("Idle-Left")
-#		if $sprite/anim.current_animation == "Up":
-#			$sprite/anim.play("Idle-Up")
-#		if $sprite/anim.current_animation == "Down":
-#			$sprite/anim.play("Idle-Down")
-		#$sprite/anim.stop()	
 	
 	move_and_slide(velocity)
 	

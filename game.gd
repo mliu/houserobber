@@ -1,5 +1,7 @@
 extends Node
 
+export (int) var max_prizes = 20
+
 onready var tree = preload("res://tree.tscn")
 onready var timer = $CanvasLayer/Timer
 onready var prize = preload("res://Prize.tscn")
@@ -36,7 +38,9 @@ func spawn_trees(num):
 		game_tree.position = (Vector2(rand_range(75, screensize.x - 75), rand_range(75 , screensize.y - 75)))
 		$tree_container.add_child(game_tree)
 
-func spawn_prizes(num):	
+func spawn_prizes(num):
+	for child in $prize_container.get_children():
+		
 	for i in range(num):
 		var game_prize = prize.instance()
 		game_prize.connect("collected", self, "_collect_prize")
@@ -59,7 +63,6 @@ func _on_exit():
 		get_tree().paused = true
 		$CanvasLayer/Dialog.visible = true
 		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
-
 		for prize_path in collected_prizes:
 			var prize = load(str(prize_path))
 			grid.add_child(prize.instance())
