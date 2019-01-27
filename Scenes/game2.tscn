@@ -17,13 +17,13 @@
 [ext_resource path="res://Scenes/GameOverDialog.tscn" type="PackedScene" id=15]
 [ext_resource path="res://analog/analog.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scenes/player2.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Scenes/Scary Level/Noise/Skull.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scenes/Scary Level/Noise/Trap.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Scenes/Scary Level/Noise/Doll.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Scenes/Scary Level/Noise/Vase.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Scenes/Scary Level/Noise/Banana.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Scenes/Scary Level/Noise/Bottle.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Scary Level/Noise/Trap.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Scenes/Scary Level/Noise/Doll.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Scenes/Scary Level/Noise/Vase.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Scenes/Scary Level/Noise/Banana.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Scenes/Scary Level/Noise/Bottle.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Scary Level/Noise/Skull.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/player2.tscn" type="PackedScene" id=24]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -62,7 +62,7 @@ use_filter = false
 font_data = ExtResource( 14 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="game" type="Node2D" index="0"]
+[node name="game" type="Node2D"]
 
 script = ExtResource( 1 )
 max_prizes = 10
@@ -317,7 +317,7 @@ rotation = 0.000460441
 
 [node name="RegularItem20" parent="furniture_container" index="12" instance=ExtResource( 6 )]
 
-position = Vector2( 76.043, 1035.98 )
+position = Vector2( -4.11313, 1062.7 )
 rotation = -0.515543
 
 [node name="RegularItem8" parent="furniture_container" index="13" instance=ExtResource( 9 )]
@@ -702,7 +702,6 @@ visible = false
 
 [node name="UI" type="CanvasLayer" parent="." index="8"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -739,11 +738,132 @@ padname = "rightPad"
 
 [node name="SoundPlayer" parent="." index="9" instance=ExtResource( 17 )]
 
-[node name="player" parent="." index="10" instance=ExtResource( 18 )]
+[node name="NoiseItems" type="Node2D" parent="." index="10"]
+
+[node name="NoiseItem7" parent="NoiseItems" index="0" instance=ExtResource( 18 )]
+
+position = Vector2( 3185.99, 1309.95 )
+
+[node name="NoiseItem8" parent="NoiseItems" index="1" instance=ExtResource( 18 )]
+
+position = Vector2( 2513.17, 680.842 )
+
+[node name="NoiseItem9" parent="NoiseItems" index="2" instance=ExtResource( 18 )]
+
+position = Vector2( 329.517, 1458.11 )
+
+[node name="NoiseItem10" parent="NoiseItems" index="3" instance=ExtResource( 19 )]
+
+position = Vector2( 2343.14, 1093.77 )
+
+[node name="NoiseItem11" parent="NoiseItems" index="4" instance=ExtResource( 19 )]
+
+position = Vector2( 2199.83, 1173.92 )
+
+[node name="NoiseItem12" parent="NoiseItems" index="5" instance=ExtResource( 19 )]
+
+position = Vector2( 2515.6, 1137.49 )
+
+[node name="NoiseItem13" parent="NoiseItems" index="6" instance=ExtResource( 19 )]
+
+position = Vector2( 1298.68, 943.172 )
+
+[node name="NoiseItem14" parent="NoiseItems" index="7" instance=ExtResource( 19 )]
+
+position = Vector2( 1155.37, 1069.48 )
+
+[node name="NoiseItem15" parent="NoiseItems" index="8" instance=ExtResource( 19 )]
+
+position = Vector2( 1264.67, 1278.37 )
+
+[node name="NoiseItem16" parent="NoiseItems" index="9" instance=ExtResource( 19 )]
+
+position = Vector2( 1458.99, 1263.8 )
+
+[node name="NoiseItem17" parent="NoiseItems" index="10" instance=ExtResource( 19 )]
+
+position = Vector2( 1510, 1074.34 )
+
+[node name="NoiseItem18" parent="NoiseItems" index="11" instance=ExtResource( 20 )]
+
+position = Vector2( 1349.69, 1115.63 )
+
+[node name="NoiseItem19" parent="NoiseItems" index="12" instance=ExtResource( 21 )]
+
+position = Vector2( 4570.51, 2014.35 )
+
+[node name="NoiseItem20" parent="NoiseItems" index="13" instance=ExtResource( 22 )]
+
+position = Vector2( 4662.81, 549.677 )
+
+[node name="NoiseItem21" parent="NoiseItems" index="14" instance=ExtResource( 22 )]
+
+position = Vector2( 1077.64, 707.561 )
+
+[node name="NoiseItem22" parent="NoiseItems" index="15" instance=ExtResource( 22 )]
+
+position = Vector2( 703.579, 2201.38 )
+
+[node name="NoiseItem23" parent="NoiseItems" index="16" instance=ExtResource( 22 )]
+
+position = Vector2( 781.307, 2378.7 )
+
+[node name="NoiseItem24" parent="NoiseItems" index="17" instance=ExtResource( 22 )]
+
+position = Vector2( 907.613, 2274.25 )
+
+[node name="NoiseItem26" parent="NoiseItems" index="18" instance=ExtResource( 22 )]
+
+position = Vector2( 939.19, 2500.15 )
+
+[node name="NoiseItem27" parent="NoiseItems" index="19" instance=ExtResource( 19 )]
+
+position = Vector2( 3278.29, 1758.3 )
+scale = Vector2( 3, 3 )
+
+[node name="NoiseItem25" parent="NoiseItems" index="20" instance=ExtResource( 22 )]
+
+position = Vector2( 560.27, 2410.27 )
+
+[node name="NoiseItem" parent="NoiseItems" index="21" instance=ExtResource( 23 )]
+
+position = Vector2( 3243.8, 1604.34 )
+
+[node name="NoiseItem2" parent="NoiseItems" index="22" instance=ExtResource( 23 )]
+
+position = Vector2( 3297.24, 1533.9 )
+
+[node name="NoiseItem3" parent="NoiseItems" index="23" instance=ExtResource( 23 )]
+
+position = Vector2( 3350.68, 1609.2 )
+
+[node name="NoiseItem4" parent="NoiseItems" index="24" instance=ExtResource( 23 )]
+
+position = Vector2( 503.918, 795.49 )
+
+[node name="NoiseItem5" parent="NoiseItems" index="25" instance=ExtResource( 23 )]
+
+position = Vector2( 1764.56, 1720.93 )
+
+[node name="NoiseItem6" parent="NoiseItems" index="26" instance=ExtResource( 23 )]
+
+position = Vector2( 561.241, 2167.38 )
+
+[node name="NoiseItem28" parent="NoiseItems" index="27" instance=ExtResource( 23 )]
+
+position = Vector2( 1962.76, 2130.94 )
+
+[node name="NoiseItem29" parent="NoiseItems" index="28" instance=ExtResource( 23 )]
+
+position = Vector2( 3801.5, 2179.52 )
+
+[node name="player" parent="." index="11" instance=ExtResource( 24 )]
 
 editor/display_folded = true
 position = Vector2( 5228.48, 1089.54 )
 scale = Vector2( 0.035, 0.035 )
+z_index = 1
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="player" index="2"]
 
@@ -770,125 +890,6 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit", "Transform" ]
-
-[node name="NoiseItems" type="Node2D" parent="." index="11"]
-
-editor/display_folded = true
-
-[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 19 )]
-
-position = Vector2( 3414.17, 1500.86 )
-active = null
-
-[node name="NoiseItem2" parent="NoiseItems" index="1" instance=ExtResource( 19 )]
-
-position = Vector2( 2384.28, 1381.84 )
-active = null
-
-[node name="NoiseItem3" parent="NoiseItems" index="2" instance=ExtResource( 19 )]
-
-position = Vector2( 3149.41, 310.666 )
-active = null
-
-[node name="NoiseItem4" parent="NoiseItems" index="3" instance=ExtResource( 19 )]
-
-position = Vector2( 317.372, 542.391 )
-active = null
-
-[node name="NoiseItem5" parent="NoiseItems" index="4" instance=ExtResource( 19 )]
-
-position = Vector2( 1633.88, 2242.67 )
-active = null
-
-[node name="NoiseItem6" parent="NoiseItems" index="5" instance=ExtResource( 19 )]
-
-position = Vector2( 1791.76, 1601.42 )
-active = null
-
-[node name="NoiseItem7" parent="NoiseItems" index="6" instance=ExtResource( 20 )]
-
-position = Vector2( 3185.99, 1309.95 )
-
-[node name="NoiseItem8" parent="NoiseItems" index="7" instance=ExtResource( 20 )]
-
-position = Vector2( 2513.17, 680.842 )
-
-[node name="NoiseItem9" parent="NoiseItems" index="8" instance=ExtResource( 20 )]
-
-position = Vector2( 329.517, 1458.11 )
-
-[node name="NoiseItem10" parent="NoiseItems" index="9" instance=ExtResource( 21 )]
-
-position = Vector2( 2343.14, 1093.77 )
-
-[node name="NoiseItem11" parent="NoiseItems" index="10" instance=ExtResource( 21 )]
-
-position = Vector2( 2199.83, 1173.92 )
-
-[node name="NoiseItem12" parent="NoiseItems" index="11" instance=ExtResource( 21 )]
-
-position = Vector2( 2515.6, 1137.49 )
-
-[node name="NoiseItem13" parent="NoiseItems" index="12" instance=ExtResource( 21 )]
-
-position = Vector2( 1298.68, 943.172 )
-
-[node name="NoiseItem14" parent="NoiseItems" index="13" instance=ExtResource( 21 )]
-
-position = Vector2( 1155.37, 1069.48 )
-
-[node name="NoiseItem15" parent="NoiseItems" index="14" instance=ExtResource( 21 )]
-
-position = Vector2( 1264.67, 1278.37 )
-
-[node name="NoiseItem16" parent="NoiseItems" index="15" instance=ExtResource( 21 )]
-
-position = Vector2( 1461.42, 1263.8 )
-
-[node name="NoiseItem17" parent="NoiseItems" index="16" instance=ExtResource( 21 )]
-
-position = Vector2( 1510, 1074.34 )
-
-[node name="NoiseItem18" parent="NoiseItems" index="17" instance=ExtResource( 22 )]
-
-position = Vector2( 1349.69, 1115.63 )
-
-[node name="NoiseItem19" parent="NoiseItems" index="18" instance=ExtResource( 23 )]
-
-position = Vector2( 4570.51, 2014.35 )
-
-[node name="NoiseItem20" parent="NoiseItems" index="19" instance=ExtResource( 24 )]
-
-position = Vector2( 4662.81, 549.677 )
-
-[node name="NoiseItem21" parent="NoiseItems" index="20" instance=ExtResource( 24 )]
-
-position = Vector2( 1077.64, 707.561 )
-
-[node name="NoiseItem22" parent="NoiseItems" index="21" instance=ExtResource( 24 )]
-
-position = Vector2( 703.579, 2201.38 )
-
-[node name="NoiseItem23" parent="NoiseItems" index="22" instance=ExtResource( 24 )]
-
-position = Vector2( 781.307, 2378.7 )
-
-[node name="NoiseItem24" parent="NoiseItems" index="23" instance=ExtResource( 24 )]
-
-position = Vector2( 907.613, 2274.25 )
-
-[node name="NoiseItem26" parent="NoiseItems" index="24" instance=ExtResource( 24 )]
-
-position = Vector2( 939.19, 2500.15 )
-
-[node name="NoiseItem27" parent="NoiseItems" index="25" instance=ExtResource( 21 )]
-
-position = Vector2( 3278.29, 1737.45 )
-scale = Vector2( 3, 3 )
-
-[node name="NoiseItem25" parent="NoiseItems" index="26" instance=ExtResource( 24 )]
-
-position = Vector2( 560.27, 2410.27 )
 
 [node name="RegularItem2" parent="." index="12" instance=ExtResource( 5 )]
 

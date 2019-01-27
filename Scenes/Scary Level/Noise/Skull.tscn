@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Scary Level/Noise/skull2.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Scary Level/Noise/skull.png" type="Texture" id=3]
 
-[node name="NoiseItem" index="0" instance=ExtResource( 1 )]
+[node name="NoiseItem" instance=ExtResource( 1 )]
 
 active = ExtResource( 2 )
 

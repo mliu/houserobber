@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/NoiseItem.gd" type="Script" id=1]
 
-[node name="NoiseItem" type="Area2D"]
+[node name="NoiseItem" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -13,7 +13,8 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-noise = 10
+noise = 2
+active = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 

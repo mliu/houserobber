@@ -1,6 +1,6 @@
 extends Area2D
 
-export var noise = 10
+export var noise = 2
 export (Texture) var active = null
 signal make_noise(decibels)
 
