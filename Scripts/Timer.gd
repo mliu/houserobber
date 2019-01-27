@@ -1,15 +1,18 @@
-extends Timer
+extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var time_start = 0
+var time_now = 0
+var time_end = 5*60
+var elapsed = 0
+var remaining = time_end
 
 func _ready():
-	timer = Timer.new()
-	timer.connect("timeout",self,"_on_timer_timeout") 
-	#timeout is what says in docs, in signals
-	#self is who respond to the callback
-	#_on_timer_timeout is the callback, can have any name
-	add_child(timer) #to process
-	timer.start() #to start
-	pass
+	time_start = OS.get_unix_time()
+	set_process(true)
+
+func _process(delta):
+	time_now = OS.get_unix_time()
+	elapsed = time_now - time_start
+	remaining = time_end - elapsed
+	var str_remaining = "%02d : %02d" % [remaining / 60, remaining % 60]
+	$TimeLeft.text = str_remaining

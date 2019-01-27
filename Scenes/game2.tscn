@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://game.gd" type="Script" id=1]
-[ext_resource path="res://images/bg2.png" type="Texture" id=2]
-[ext_resource path="res://Entrance.tscn" type="PackedScene" id=3]
-[ext_resource path="res://HealthBar.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Node.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/game.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Scary Level/bg2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Entrance.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=5]
 [ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://analog/analog.tscn" type="PackedScene" id=7]
-[ext_resource path="res://player2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/player2.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 

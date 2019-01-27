@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IMG_0178.PNG-d5e6c2ebe3f39288b8c91e305d008b53.stex"
+path="res://.import/IMG_0179.PNG-9446623b73a0879115b97cfd9524cf3c.stex"
 
 [deps]
 
-source_file="res://Assets/Scary Level/Player/IMG_0178.PNG"
-dest_files=[ "res://.import/IMG_0178.PNG-d5e6c2ebe3f39288b8c91e305d008b53.stex" ]
+source_file="res://Assets/Scary Level/Player/Walk/IMG_0179.PNG"
+dest_files=[ "res://.import/IMG_0179.PNG-9446623b73a0879115b97cfd9524cf3c.stex" ]
 
 [params]
 
