@@ -3,7 +3,7 @@
 [ext_resource path="res://Timer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/timer.png" type="Texture" id=2]
 
-[node name="Timer" type="Node" index="0"]
+[node name="Timer" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -32,9 +32,9 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 20.0
-margin_top = 40.0
+margin_top = 53.0
 margin_right = 110.0
-margin_bottom = 80.0
+margin_bottom = 93.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -43,16 +43,16 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = ""
+bbcode_text = "[b][center]TEST[/center][/b]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 12
-text = ""
+text = "TEST"
 scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "custom_colors" ]
+_sections_unfolded = [ "BBCode", "Grow Direction", "Rect", "custom_colors", "custom_constants", "custom_fonts" ]
 
 

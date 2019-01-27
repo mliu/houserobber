@@ -50,7 +50,7 @@ use_filter = false
 font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="game" type="Node2D"]
+[node name="game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 max_prizes = 20
@@ -765,7 +765,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
 
-position = Vector2( 10, 10.8091 )
+position = Vector2( 120, 50 )
 
 [node name="Timer" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
 
