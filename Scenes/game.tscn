@@ -443,7 +443,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 5 )]
 
-position = Vector2( 10, 10.8091 )
+position = Vector2( 120, 50 )
 
 [node name="Timer" parent="CanvasLayer" index="1" instance=ExtResource( 6 )]
 
