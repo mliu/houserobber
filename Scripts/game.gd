@@ -2,6 +2,7 @@ extends Node
 
 export (int) var max_prizes = 20
 
+onready var soundplayer = $SoundPlayer
 onready var timer = $CanvasLayer/Timer
 onready var prize = preload("res://Scenes/Prize.tscn")
 
@@ -46,7 +47,7 @@ func _increase_noise(decibels):
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
-	$Ding.play()
+	soundplayer.get_node("Ding").play()
 	
 func _on_exit():
 	# Only exit if it's past 30 seconds

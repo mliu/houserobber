@@ -28,7 +28,7 @@ func _physics_process(delta):
 		velocity.y += 1
 
 	# Add in analog_velocity
-	velocity += analog_velocity	
+	velocity += analog_velocity
 	
 	if velocity.x != 0:
 		velocity = velocity.normalized() * speed

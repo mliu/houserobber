@@ -19,6 +19,11 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
+"name": "Forward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
 "name": "Walk",
 "speed": 5.0
 } ]
@@ -28,7 +33,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 7, 13 )
 
-[node name="player" type="KinematicBody2D" index="0" groups=[
+[node name="player" type="KinematicBody2D" groups=[
 "player",
 ]]
 
@@ -48,6 +53,7 @@ scale = Vector2( 2.5, 2.5 )
 z_as_relative = false
 frames = SubResource( 1 )
 animation = "Idle"
+frame = 6
 playing = true
 _sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
 
