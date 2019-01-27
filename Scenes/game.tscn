@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/Entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Boundary.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/Noises.tscn" type="PackedScene" id=6]
+[ext_resource path="res://audio/footsteps-4.wav" type="AudioStream" id=6]
 [ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/Node.gd" type="Script" id=8]
 [ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=9]
@@ -737,10 +737,16 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit" ]
 
-[node name="Noises" parent="player" index="3" instance=ExtResource( 6 )]
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="player" index="3"]
 
-position = Vector2( -10728.8, -44807.2 )
-scale = Vector2( 25, 25 )
+stream = ExtResource( 6 )
+volume_db = 10.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
