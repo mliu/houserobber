@@ -49,7 +49,7 @@
 
 script = ExtResource( 1 )
 max_prizes = 3
-level_type = null
+level_type = "cute"
 
 [node name="Background" type="Sprite" parent="." index="0"]
 

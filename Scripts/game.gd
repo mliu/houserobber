@@ -9,7 +9,7 @@ onready var prize = preload("res://Scenes/Prize.tscn")
 
 var screensize
 var noise_level = 0.0
-var max_noise_level = 100.0
+var max_noise_level = 1500.0
 var total_prize_value = 0.0
 var collected_prizes = []
 
@@ -57,7 +57,7 @@ func _increase_noise(decibels):
 	# TODO: game over
 	print("noise_level", noise_level)
 	print("max", max_noise_level)
-	if noise_level >= max_noise_level:
+	if noise_level > max_noise_level:
 		get_tree().paused = true
 		$CanvasLayer/GameOverDialog.visible = true
 		noise_level = 0.0
@@ -68,8 +68,8 @@ func _collect_prize(prize_node):
 	soundplayer.get_node("Ding").play()
 	
 func _on_exit():
-	# Only exit if it's past 15 seconds
-	if timer.elapsed > 1 and !$CanvasLayer/EscapeDialog.visible:
+	# Only exit if it's past 10 seconds
+	if timer.elapsed > 10 and !$CanvasLayer/EscapeDialog.visible:
 		get_tree().paused = true
 		$CanvasLayer/EscapeDialog.visible = true
 		var grid = $CanvasLayer/EscapeDialog/ScreenContainer/GridContainer
