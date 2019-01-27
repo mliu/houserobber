@@ -33,11 +33,11 @@ func _physics_process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$sprite.play("WalkRight")
-		$Footsteps.play()
+		$Noises/Footsteps.play()
 		$sprite.flip_h = velocity.x < 0	
 	else:
 		$sprite.play("Idle")
-		$Footsteps.stop()
+		$Noises/Footsteps.stop()
 	
 	move_and_slide(velocity)
 	
