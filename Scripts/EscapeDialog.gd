@@ -12,8 +12,6 @@ func _ready():
 func _process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
-	print(delta)
-	print($ScreenContainer/RestartButton.is_pressed())
 	if $ScreenContainer/RestartButton.is_pressed():
-		get_tree().reload_current_scene()
 		get_tree().paused = false
+		get_tree().reload_current_scene()

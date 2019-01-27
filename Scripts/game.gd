@@ -55,6 +55,11 @@ func _increase_noise(decibels):
 	noise_level += decibels
 	$CanvasLayer/HealthBar.on_update_health(noise_level / max_noise_level)
 	# TODO: game over
+	print("noise_level", noise_level)
+	print("max", max_noise_level)
+	if noise_level >= max_noise_level:
+		get_tree().paused = true
+		$CanvasLayer/GameOverDialog.visible = true
 
 func _collect_prize(prize_node):
 	collected_prizes.append(prize_node)
