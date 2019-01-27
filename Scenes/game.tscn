@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://Cute Level.png" type="Texture" id=2]
@@ -7,23 +7,13 @@
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://audio/footstep.wav" type="AudioStream" id=6]
 [ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=8]
-[ext_resource path="res://Assets/timer.png" type="Texture" id=9]
-[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Timer.tscn" type="PackedScene" id=8]
+[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Cute Level/Items/Noise/Alarm.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/SoundPlayer.tscn" type="PackedScene" id=12]
 
-[sub_resource type="BitmapFont" id=1]
-
-textures = [  ]
-chars = PoolIntArray(  )
-kernings = PoolIntArray(  )
-height = 1.0
-ascent = 0.0
-distance_field = false
-
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -52,12 +42,12 @@ anti_aliasing = true
 anti_aliasing_size = 1
 _sections_unfolded = [ "Corner Radius" ]
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 10 )
+font_data = ExtResource( 9 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="game" type="Node2D" index="0"]
@@ -767,7 +757,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -778,59 +767,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 position = Vector2( 10, 10.8091 )
 
-[node name="Timer" type="Node" parent="CanvasLayer" index="1"]
-
-script = ExtResource( 8 )
-
-[node name="Timer" type="TextureRect" parent="CanvasLayer/Timer" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = 80.0
-margin_right = 161.0
-margin_bottom = 215.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-texture = ExtResource( 9 )
-expand = true
-stretch_mode = 0
-
-[node name="TimeLeft" type="RichTextLabel" parent="CanvasLayer/Timer" index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 61.0
-margin_top = 133.0
-margin_right = 131.0
-margin_bottom = 173.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/mono_font = SubResource( 1 )
-bbcode_enabled = false
-bbcode_text = ""
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = ""
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "Margin", "custom_colors" ]
+[node name="Timer" parent="CanvasLayer" index="1" instance=ExtResource( 8 )]
 
 [node name="Dialog" type="Panel" parent="CanvasLayer" index="2"]
 
@@ -850,7 +787,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 _sections_unfolded = [ "custom_styles" ]
 
 [node name="ScreenContainer" type="VBoxContainer" parent="CanvasLayer/Dialog" index="0"]
@@ -886,7 +823,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "You Escaped!"
 align = 1
 percent_visible = 1.0
@@ -938,7 +875,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Grow Direction", "Rect", "Size Flags", "Theme" ]
 
-[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 11 )]
+[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 10 )]
 
 position = Vector2( 64.2845, 496.744 )
 isDynamicallyShowing = true
@@ -949,8 +886,8 @@ padname = "rightPad"
 
 position = Vector2( 370, 2160 )
 
-[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 12 )]
+[node name="NoiseItem" parent="NoiseItems" index="0" instance=ExtResource( 11 )]
 
-[node name="SoundPlayer" parent="." index="10" instance=ExtResource( 13 )]
+[node name="SoundPlayer" parent="." index="10" instance=ExtResource( 12 )]
 
 
