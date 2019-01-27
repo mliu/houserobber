@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/game.gd" type="Script" id=1]
 [ext_resource path="res://Cute Level.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Entrance.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Boundary.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://audio/footsteps-4.wav" type="AudioStream" id=6]
-[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scripts/Timer.gd" type="Script" id=8]
-[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/HealthBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=7]
+[ext_resource path="res://SpaceMono-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://analog/analog.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -45,7 +44,7 @@ _sections_unfolded = [ "Corner Radius" ]
 size = 30
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="game" type="Node2D" index="0"]
@@ -737,17 +736,6 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit" ]
 
-[node name="Footsteps" type="AudioStreamPlayer2D" parent="player" index="3"]
-
-stream = ExtResource( 6 )
-volume_db = 10.0
-pitch_scale = 1.0
-autoplay = false
-max_distance = 2000.0
-attenuation = 1.0
-bus = "Master"
-area_mask = 1
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="7"]
 
 layer = 1
@@ -756,14 +744,14 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 7 )]
+[node name="HealthBar" parent="CanvasLayer" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 10, 10.8091 )
 
 [node name="Timer" type="Node" parent="CanvasLayer" index="1"]
 
 editor/display_folded = true
-script = ExtResource( 8 )
+script = ExtResource( 7 )
 
 [node name="TimeLeft" type="Label" parent="CanvasLayer/Timer" index="0"]
 
@@ -891,7 +879,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Grow Direction", "Rect", "Visibility" ]
 
-[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 10 )]
+[node name="AnalogRight" parent="UI/AreaAnalogRight" index="0" instance=ExtResource( 9 )]
 
 position = Vector2( 64.2845, 496.744 )
 isDynamicallyShowing = true
