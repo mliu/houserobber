@@ -20,7 +20,7 @@ func _ready():
 	# get Screensize and determine player size
 	screensize = get_viewport().size
 	spawn_trees(rand_range(1,10))
-	spawn_prizes(10)
+	spawn_prizes(100)
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
