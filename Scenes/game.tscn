@@ -48,8 +48,8 @@
 [node name="game" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
-max_prizes = 3
-level_type = null
+max_prizes = 4
+level_type = "cute"
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
@@ -78,17 +78,19 @@ _sections_unfolded = [ "Z Index" ]
 
 position = Vector2( 1730, 2610 )
 
-[node name="spawn2" type="Node2D" parent="prize_spawn_container" index="1"]
+[node name="spawn4" type="Node2D" parent="prize_spawn_container" index="1"]
+
+position = Vector2( 501.738, 2173.9 )
+
+[node name="spawn2" type="Node2D" parent="prize_spawn_container" index="2"]
 
 position = Vector2( 2770, 1450 )
 
-[node name="spawn3" type="Node2D" parent="prize_spawn_container" index="2"]
+[node name="spawn3" type="Node2D" parent="prize_spawn_container" index="3"]
 
 position = Vector2( 710, 780 )
 
 [node name="wall_container" type="Node" parent="." index="5"]
-
-editor/display_folded = true
 
 [node name="LeftBoundary" parent="wall_container" index="0" instance=ExtResource( 4 )]
 

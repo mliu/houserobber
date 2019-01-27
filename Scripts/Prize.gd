@@ -36,6 +36,10 @@ func _ready():
 	$CollisionShape2D.shape = shape
 	$CollisionShape2D.position = texture.texture.get_size() / 2
 	self.add_child(texture)
+	
+	# Adjust particle position and size
+	$Particles.process_material.emission_box_extents = Vector3(shape.extents.x, shape.extents.y, 1)
+	$Particles.position = texture.texture.get_size() / 2
 	pass
 
 func _process(delta):
