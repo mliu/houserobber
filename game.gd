@@ -1,8 +1,8 @@
 extends Node
 
 onready var tree = preload("res://tree.tscn")
-onready var prize = preload("res://Prize.tscn")
 onready var timer = $CanvasLayer/Timer
+onready var prize = preload("res://Prize.tscn")
 
 var screensize
 var noise_level = 0.0
@@ -24,7 +24,6 @@ func _ready():
 	$Entrance.connect("exit", self, "_on_exit")
 
 func _process(delta):
-	print(collected_prizes)
 	pass
 
 func spawn_trees(num):	
@@ -56,7 +55,14 @@ func _collect_prize(prize_node):
 	
 func _on_exit():
 	# Only exit if it's past 30 seconds
-	if timer.elapsed > 30:
-		# TODO show game over screen
+	if timer.elapsed > 3 and !$CanvasLayer/Dialog.visible:
+		get_tree().paused = true
+		$CanvasLayer/Dialog.visible = true
+		var grid = $CanvasLayer/Dialog/ScreenContainer/GridContainer
+
+		for prize_path in collected_prizes:
+			var prize = load(str(prize_path))
+			grid.add_child(prize.instance())
+			yield(get_tree().create_timer(0.25), "timeout")
 		pass
 	
